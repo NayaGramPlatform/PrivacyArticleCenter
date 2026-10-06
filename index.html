@@ -1,21 +1,394 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NayaGram Privacy Center · The World of Privacy</title>
-    <meta name="description" content="Official Privacy Center and Security Architecture for NayaGram Platform. Zero-data architecture powered by Telegram MTProto 2.0." />
-    <meta property="og:title" content="NayaGram Privacy Center · The World of Privacy" />
-    <meta property="og:description" content="Official Privacy Center and Security Architecture for NayaGram Platform. End-to-end encrypted messaging with zero intermediary servers." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-sky-500/20 selection:text-sky-900">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - NayaGram Platform</title>
+  <meta name="description" content="Official Privacy Policy for NayaGram Android Application. Fully compliant with Google Play Store Developer Policies and GDPR.">
+  <meta property="og:title" content="Privacy Policy - NayaGram">
+  <meta property="og:description" content="Direct MTProto encryption, zero data logging, privacy-first messaging.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #38bdf8;
+      --bg: #0b1120;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --tag-bg: rgba(56, 189, 248, 0.1);
+      --tag-border: rgba(56, 189, 248, 0.3);
+      --success: #10b981;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 30px 16px 60px;
+    }
+
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Top Bar / Header */
+    .header-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 20px;
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .header-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .app-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(2, 132, 199, 0.4);
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .badge-blue {
+      background: var(--tag-bg);
+      color: var(--accent);
+      border: 1px solid var(--tag-border);
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, 0.1);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* Content Card */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .intro-box {
+      background: rgba(2, 132, 199, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 32px;
+      font-size: 15px;
+      color: #e2e8f0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .num {
+      width: 28px;
+      height: 28px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    strong {
+      color: #f1f5f9;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0 20px 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .highlight-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-card h4 {
+      color: var(--accent);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(56, 189, 248, 0.05));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    .copy-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 8px;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent);
+      color: #0b1120;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 640px) {
+      .content-card, .header-card {
+        padding: 24px 20px;
+      }
+      .title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- Header Hero -->
+    <div class="header-card">
+      <div class="brand-row">
+        <div class="app-icon">N</div>
+        <div class="brand-name">NayaGram</div>
+      </div>
+      <h1 class="title">Privacy Policy</h1>
+      <p style="color: #cbd5e1; font-size: 15px; margin-bottom: 0;">
+        Official privacy disclosure and data safety policy for NayaGram Android Application.
+      </p>
+      <div class="meta-badges">
+        <span class="badge badge-blue">NayaGram Platform</span>
+        <span class="badge badge-green">Google Play Store Compliant</span>
+        <span class="badge badge-blue">Effective: October 2026</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-card">
+      <div class="intro-box">
+        Welcome to <strong>NayaGram</strong>, an enhanced high-performance messaging client powered by the official open-source Telegram MTProto protocol. This Privacy Policy details our radical commitment to your personal privacy, zero data collection, and direct encrypted communication.
+      </div>
+
+      <h2><span class="num">1</span> Radical Zero Data Collection</h2>
+      <p>NayaGram operates under a strict principle of <strong>data minimization and zero interception</strong>:</p>
+      <ul>
+        <li><strong>No Personal Server Logging:</strong> We do NOT host intermediary database servers that collect, store, sell, or analyze your messages, photos, voice notes, or contacts.</li>
+        <li><strong>No Account Profiling:</strong> We do NOT track your behavior, active hours, or communication patterns.</li>
+        <li><strong>Zero Message Interception:</strong> All transmissions occur directly between your device and Telegram's official global cloud infrastructure.</li>
+      </ul>
+
+      <h2><span class="num">2</span> Official Telegram API Integration</h2>
+      <p>NayaGram utilizes the official Telegram API protocol (api.telegram.org / MTProto 2.0):</p>
+      <div class="highlight-card">
+        <h4>🔒 Direct End-to-End & Cloud Encryption</h4>
+        <p style="margin-bottom: 0; font-size: 14px;">
+          Your login credentials, SMS confirmation codes, secret chats, and cloud chats are encrypted using MTProto military-grade cryptography directly with Telegram servers. NayaGram developers have zero ability to decrypt or read your messages. Please inspect <a href="https://telegram.org/privacy" target="_blank" rel="noopener">Telegram Official Privacy Policy</a>.
+        </p>
+      </div>
+
+      <h2><span class="num">3</span> Android System Permissions & Purpose</h2>
+      <p>NayaGram asks only for device permissions strictly necessary to deliver messaging features:</p>
+      <ul>
+        <li><strong>Storage & Photos / Media:</strong> Required to save downloaded files, photos, and voice notes to your local device, and to select media for sending.</li>
+        <li><strong>Camera & Microphone:</strong> Used exclusively when you record video messages, snap photos in-app, or conduct encrypted voice/video calls.</li>
+        <li><strong>Contacts (Optional):</strong> Allows local contact matching with Telegram accounts. Your contacts are NEVER copied or uploaded to any third-party marketing server.</li>
+        <li><strong>Notifications:</strong> Required on Android 13+ to ensure timely notification of incoming calls and chats.</li>
+      </ul>
+
+      <h2><span class="num">4</span> On-Device Only Power Features</h2>
+      <p>NayaGram includes advanced user utilities designed for privacy and productivity:</p>
+      <ul>
+        <li><strong>Message Scheduler & Auto-Reply:</strong> Operates entirely offline inside your phone's local sandbox memory.</li>
+        <li><strong>Anti-Delete & Message Logs:</strong> Stored locally inside the app's protected sandbox database. No external telemetry is transmitted.</li>
+        <li><strong>Clear Data Anytime:</strong> All local data can be cleared instantly via <em>Settings > Data and Storage > Clear Cache</em>.</li>
+      </ul>
+
+      <h2><span class="num">5</span> No Third-Party Telemetry or Ad SDKs</h2>
+      <p>
+        NayaGram contains <strong>ZERO advertisements</strong> and <strong>ZERO invasive commercial analytics SDKs</strong> (no Facebook SDK, no AppsFlyer, no ad networks). Your device identifier and advertising ID are never shared.
+      </p>
+
+      <h2><span class="num">6</span> Account Deletion & Right to Erasure (GDPR)</h2>
+      <p>You maintain 100% control over your account and personal presence:</p>
+      <ul>
+        <li><strong>Uninstall / Logout:</strong> Removes all local keys, cache files, and settings immediately from your Android device.</li>
+        <li><strong>Delete Account:</strong> You can completely terminate your Telegram account and wipe all cloud history anytime through <em>Settings > Privacy and Security > Delete My Account</em>.</li>
+      </ul>
+
+      <h2><span class="num">7</span> Child Privacy Protection</h2>
+      <p>
+        NayaGram is not directed towards children under the age of 13. We do not knowingly solicit or collect data from minors.
+      </p>
+
+      <!-- Contact Info Box -->
+      <div class="contact-box">
+        <h3 style="color: #fff; font-size: 18px; margin-bottom: 6px;">Questions & Support Inquiries</h3>
+        <p style="margin-bottom: 12px; font-size: 14px;">
+          For privacy inquiries, security reports, or Play Store compliance verification, please contact our official team:
+        </p>
+        <div class="contact-item">
+          <span>📧 <strong>Official Support Email:</strong> <a href="mailto:support.nayagram@gmail.com">support.nayagram@gmail.com</a></span>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText('support.nayagram@gmail.com'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy', 2000);">Copy</button>
+        </div>
+        <div class="contact-item">
+          <span>🛡️ <strong>GitHub Organization:</strong> <a href="https://github.com/NayaGramPlatform" target="_blank" rel="noopener">github.com/NayaGramPlatform</a></span>
+        </div>
+        <div class="contact-item">
+          <span>📱 <strong>Client Repository:</strong> <a href="https://github.com/NayaGramPlatform/NayaGram-Client" target="_blank" rel="noopener">NayaGram-Client</a></span>
+        </div>
+      </div>
+
+      <footer>
+        © 2026 NayaGram Platform. All Rights Reserved.<br>
+        Built on Telegram Open Source Android Client under GNU General Public License.
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
