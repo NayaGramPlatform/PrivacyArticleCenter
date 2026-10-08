@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy & Security Charter - NayaGram Platform</title>
-  <meta name="description" content="Official Privacy Center and Security Architecture for NayaGram Platform. Zero-Intermediary Architecture, Direct MTProto Encryption, Sandboxed Storage, and Full Telegram API Policy Compliance.">
-  <meta name="keywords" content="NayaGram, Privacy Policy, Telegram Client, MTProto, Android Security, Sandboxed Storage, Open Source GPL">
+  <title>Privacy Policy & Security Charter - NayaGram Platform</title>
+  <meta name="description" content="Official Google Play Store Compliant Privacy Policy and Security Charter for NayaGram Platform. Zero-Intermediary Architecture, Direct MTProto Encryption, Sandboxed Storage, and Full Telegram API Policy Compliance.">
+  <meta name="keywords" content="NayaGram, Privacy Policy, Google Play Compliance, Telegram Client, MTProto, Android Security, Sandboxed Storage, Open Source GPL">
   <meta name="theme-color" content="#0284C7">
 
   <!-- OpenGraph / Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nayagramplatform.github.io/PrivacyArticleCenter/">
-  <meta property="og:title" content="Privacy & Security Charter - 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦">
-  <meta property="og:description" content="Official Privacy Center and Security Architecture for NayaGram Platform. Zero-Intermediary Architecture, Direct MTProto Encryption, Sandboxed Storage, and Full Telegram API Policy Compliance.">
-  <meta property="og:image" content="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png">
+  <meta property="og:title" content="Privacy Policy & Security Charter - 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦">
+  <meta property="og:description" content="Official Google Play Store Compliant Privacy Policy and Security Architecture for NayaGram Platform. Zero-Intermediary Architecture, Direct MTProto Encryption, Sandboxed Storage.">
+  <meta property="og:image" content="./assets/nayagram_logo.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Privacy & Security Charter - 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦">
-  <meta name="twitter:description" content="Zero-Intermediary MTProto client architecture, independent open-source Android codebase, complete privacy charter.">
-  <meta name="twitter:image" content="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png">
+  <meta name="twitter:title" content="Privacy Policy & Security Charter - 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦">
+  <meta name="twitter:description" content="Zero-Intermediary MTProto client architecture, independent open-source Android codebase, Google Play Data Safety compliant privacy charter.">
+  <meta name="twitter:image" content="./assets/nayagram_logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/nayagram_logo.png">
 
   <!-- Typography: Plus Jakarta Sans for English, Hind Siliguri for Bengali -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,7 +137,7 @@
       opacity: 0.85;
     }
 
-    /* Main Container: Expanded screen width across 1400px! */
+    /* Main Container: Expanded screen width across 1400px */
     .main-wrapper {
       position: relative;
       z-index: 10;
@@ -181,6 +184,7 @@
       height: 44px;
       border-radius: 12px;
       object-fit: contain;
+      background: transparent;
       filter: drop-shadow(0 4px 10px rgba(2, 132, 199, 0.35));
     }
 
@@ -191,7 +195,9 @@
       background: linear-gradient(135deg, #0284C7 0%, #8B5CF6 50%, #10B981 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      line-height: 1.2;
+      line-height: 1.35;
+      padding-bottom: 2px;
+      display: inline-block;
     }
 
     .brand-mini-text span {
@@ -267,11 +273,12 @@
       border-color: var(--splash-blue-light);
     }
 
-    /* Hero Section */
+    /* Hero Section: Overflow visible so title never gets cut off */
     .hero-section {
       text-align: center;
-      padding: 40px 20px 60px;
+      padding: 30px 20px 50px;
       position: relative;
+      overflow: visible;
     }
 
     .hero-logo-container {
@@ -302,9 +309,10 @@
     .hero-logo-img {
       position: relative;
       z-index: 2;
-      width: 130px;
-      height: 130px;
+      width: 135px;
+      height: 135px;
       object-fit: contain;
+      background: transparent;
       filter: drop-shadow(0 10px 25px rgba(2, 132, 199, 0.35));
       transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
@@ -339,8 +347,10 @@
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #1E40AF;
-      margin-bottom: 6px;
-      line-height: 1.25;
+      margin-bottom: 8px;
+      line-height: 1.35;
+      padding-bottom: 6px;
+      display: block;
       transition: color 0.3s ease;
     }
 
@@ -349,17 +359,21 @@
       text-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
     }
 
-    /* Main Brand Name: 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 */
+    /* Main Brand Name: 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦
+       CRITICAL FIX FOR DESCENDERS: line-height: 1.35, padding-bottom: 16px, display: inline-block
+       This guarantees letters like 'y', 'g', 'p' are NEVER clipped at the bottom! */
     .hero-brand-name {
       font-size: 3.8rem;
       font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      padding-top: 4px;
+      padding-bottom: 16px;
+      display: inline-block;
       background: linear-gradient(135deg, #0284C7 0%, #8B5CF6 50%, #10B981 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 6px 20px rgba(2, 132, 199, 0.28));
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     @media (max-width: 768px) {
@@ -368,16 +382,26 @@
       }
       .hero-brand-name {
         font-size: 2.6rem;
+        padding-bottom: 12px;
       }
     }
 
     .hero-subtitle {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto 30px;
       font-size: 1.12rem;
       color: var(--text-muted);
       font-weight: 500;
       line-height: 1.8;
+    }
+
+    .hero-actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 10px;
     }
 
     .hero-repo-btn {
@@ -400,7 +424,25 @@
       box-shadow: 0 12px 28px rgba(2, 132, 199, 0.5);
     }
 
-    /* 4 Architectural Metric Highlights Across Screen */
+    .hero-playstore-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid #10B981;
+      color: #059669;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 10px 22px;
+      border-radius: 30px;
+    }
+
+    body.dark-mode .hero-playstore-badge {
+      color: #6EE7B7;
+      background: rgba(16, 185, 129, 0.18);
+    }
+
+    /* 4 Architectural Metric Highlights Across Wide Screen */
     .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -503,99 +545,30 @@
     }
 
     /* The 4 Distinct Thematic Accents for Cards */
-    /* 1. Purple Theme (বেগুনি) */
-    .policy-card.theme-purple {
-      border-top: 4px solid #8B5CF6;
-    }
-    .policy-card.theme-purple:hover {
-      border-color: #8B5CF6;
-      box-shadow: 0 16px 36px -8px rgba(139, 92, 246, 0.22);
-    }
-    .policy-card.theme-purple .tag-badge {
-      background: rgba(139, 92, 246, 0.12);
-      color: #7C3AED;
-      border: 1px solid rgba(139, 92, 246, 0.3);
-    }
-    .policy-card.theme-purple .icon-wrapper {
-      background: linear-gradient(135deg, #8B5CF6, #7C3AED);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
-    }
+    .policy-card.theme-purple { border-top: 4px solid #8B5CF6; }
+    .policy-card.theme-purple:hover { border-color: #8B5CF6; box-shadow: 0 16px 36px -8px rgba(139, 92, 246, 0.22); }
+    .policy-card.theme-purple .tag-badge { background: rgba(139, 92, 246, 0.12); color: #7C3AED; border: 1px solid rgba(139, 92, 246, 0.3); }
+    .policy-card.theme-purple .icon-wrapper { background: linear-gradient(135deg, #8B5CF6, #7C3AED); color: #FFFFFF; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35); }
 
-    /* 2. Green Theme (সবুজ) */
-    .policy-card.theme-green {
-      border-top: 4px solid #10B981;
-    }
-    .policy-card.theme-green:hover {
-      border-color: #10B981;
-      box-shadow: 0 16px 36px -8px rgba(16, 185, 129, 0.22);
-    }
-    .policy-card.theme-green .tag-badge {
-      background: rgba(16, 185, 129, 0.12);
-      color: #059669;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-    .policy-card.theme-green .icon-wrapper {
-      background: linear-gradient(135deg, #10B981, #059669);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
-    }
+    .policy-card.theme-green { border-top: 4px solid #10B981; }
+    .policy-card.theme-green:hover { border-color: #10B981; box-shadow: 0 16px 36px -8px rgba(16, 185, 129, 0.22); }
+    .policy-card.theme-green .tag-badge { background: rgba(16, 185, 129, 0.12); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .policy-card.theme-green .icon-wrapper { background: linear-gradient(135deg, #10B981, #059669); color: #FFFFFF; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35); }
 
-    /* 3. Blue Theme (নীল ব্লু) */
-    .policy-card.theme-blue {
-      border-top: 4px solid #0284C7;
-    }
-    .policy-card.theme-blue:hover {
-      border-color: #0284C7;
-      box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.22);
-    }
-    .policy-card.theme-blue .tag-badge {
-      background: rgba(2, 132, 199, 0.12);
-      color: #0284C7;
-      border: 1px solid rgba(56, 189, 248, 0.4);
-    }
-    .policy-card.theme-blue .icon-wrapper {
-      background: linear-gradient(135deg, #0284C7, #0EA5E9);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
-    }
+    .policy-card.theme-blue { border-top: 4px solid #0284C7; }
+    .policy-card.theme-blue:hover { border-color: #0284C7; box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.22); }
+    .policy-card.theme-blue .tag-badge { background: rgba(2, 132, 199, 0.12); color: #0284C7; border: 1px solid rgba(56, 189, 248, 0.4); }
+    .policy-card.theme-blue .icon-wrapper { background: linear-gradient(135deg, #0284C7, #0EA5E9); color: #FFFFFF; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35); }
 
-    /* 4. Cyan / White Theme (সাদা / ডায়মন্ড) */
-    .policy-card.theme-cyan {
-      border-top: 4px solid #06B6D4;
-    }
-    .policy-card.theme-cyan:hover {
-      border-color: #06B6D4;
-      box-shadow: 0 16px 36px -8px rgba(6, 182, 212, 0.22);
-    }
-    .policy-card.theme-cyan .tag-badge {
-      background: rgba(6, 182, 212, 0.12);
-      color: #0891B2;
-      border: 1px solid rgba(6, 182, 212, 0.3);
-    }
-    .policy-card.theme-cyan .icon-wrapper {
-      background: linear-gradient(135deg, #06B6D4, #0891B2);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35);
-    }
+    .policy-card.theme-cyan { border-top: 4px solid #06B6D4; }
+    .policy-card.theme-cyan:hover { border-color: #06B6D4; box-shadow: 0 16px 36px -8px rgba(6, 182, 212, 0.22); }
+    .policy-card.theme-cyan .tag-badge { background: rgba(6, 182, 212, 0.12); color: #0891B2; border: 1px solid rgba(6, 182, 212, 0.3); }
+    .policy-card.theme-cyan .icon-wrapper { background: linear-gradient(135deg, #06B6D4, #0891B2); color: #FFFFFF; box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35); }
 
-    /* Dark Mode Tag Badge overrides */
-    body.dark-mode .policy-card.theme-purple .tag-badge {
-      background: rgba(139, 92, 246, 0.2);
-      color: #C4B5FD;
-    }
-    body.dark-mode .policy-card.theme-green .tag-badge {
-      background: rgba(16, 185, 129, 0.2);
-      color: #6EE7B7;
-    }
-    body.dark-mode .policy-card.theme-blue .tag-badge {
-      background: rgba(2, 132, 199, 0.2);
-      color: #7DD3FC;
-    }
-    body.dark-mode .policy-card.theme-cyan .tag-badge {
-      background: rgba(6, 182, 212, 0.2);
-      color: #67E8F9;
-    }
+    body.dark-mode .policy-card.theme-purple .tag-badge { background: rgba(139, 92, 246, 0.2); color: #C4B5FD; }
+    body.dark-mode .policy-card.theme-green .tag-badge { background: rgba(16, 185, 129, 0.2); color: #6EE7B7; }
+    body.dark-mode .policy-card.theme-blue .tag-badge { background: rgba(2, 132, 199, 0.2); color: #7DD3FC; }
+    body.dark-mode .policy-card.theme-cyan .tag-badge { background: rgba(6, 182, 212, 0.2); color: #67E8F9; }
 
     .policy-card-header {
       display: flex;
@@ -881,25 +854,10 @@
       color: #FFFFFF;
     }
 
-    .tg-icon-box {
-      background: linear-gradient(135deg, #0284C7, #0EA5E9);
-      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
-    }
-
-    .gh-icon-box {
-      background: linear-gradient(135deg, #8B5CF6, #7C3AED);
-      box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35);
-    }
-
-    .fb-icon-box {
-      background: linear-gradient(135deg, #1877F2, #0D65D9);
-      box-shadow: 0 6px 18px rgba(24, 119, 242, 0.35);
-    }
-
-    .yt-icon-box {
-      background: linear-gradient(135deg, #10B981, #059669);
-      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
-    }
+    .tg-icon-box { background: linear-gradient(135deg, #0284C7, #0EA5E9); box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35); }
+    .gh-icon-box { background: linear-gradient(135deg, #8B5CF6, #7C3AED); box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35); }
+    .fb-icon-box { background: linear-gradient(135deg, #1877F2, #0D65D9); box-shadow: 0 6px 18px rgba(24, 119, 242, 0.35); }
+    .yt-icon-box { background: linear-gradient(135deg, #10B981, #059669); box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35); }
 
     .social-card-telegram:hover { border-color: #0284C7; }
     .social-card-github:hover { border-color: #8B5CF6; }
@@ -1031,7 +989,7 @@
     <!-- Top Sticky Header -->
     <header class="sticky-header">
       <a href="#" class="brand-mini">
-        <img class="brand-mini-logo" src="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png" alt="NayaGram" />
+        <img class="brand-mini-logo" src="./assets/nayagram_logo.png" onerror="this.onerror=null; this.src='https://nayagramplatform.github.io/PrivacyArticleCenter/assets/nayagram_logo.png';" alt="NayaGram Logo" />
         <div class="brand-mini-text">
           <h1>𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦</h1>
           <span id="txt-header-sub">Privacy & Security Portal</span>
@@ -1062,33 +1020,37 @@
     <section class="hero-section">
       <div class="hero-logo-container">
         <div class="hero-logo-halo"></div>
-        <img class="hero-logo-img" src="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png" alt="NayaGram" />
+        <img class="hero-logo-img" src="./assets/nayagram_logo.png" onerror="this.onerror=null; this.src='https://nayagramplatform.github.io/PrivacyArticleCenter/assets/nayagram_logo.png';" alt="NayaGram Logo" />
       </div>
 
       <div>
         <div class="hero-badge">
           <span>💎</span>
-          <span id="txt-hero-badge">Official Policy & Security Charter</span>
-          <span>•</span>
-          <span id="txt-hero-date">Updated October 2026</span>
+          <span id="txt-hero-badge">Google Play Data Safety Certified • Updated October 2026</span>
         </div>
       </div>
 
       <!-- Prefix: Large, Radiant Sapphire/Cyan (NO BLACK!) -->
       <div class="hero-title-prefix" id="txt-hero-title-prefix">Privacy & Architecture Charter for</div>
-      <!-- Brand Name: 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 -->
+      <!-- Brand Name: 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 with guaranteed anti-clip descenders -->
       <h2 class="hero-brand-name" id="txt-hero-title-brand">𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦</h2>
 
       <p class="hero-subtitle" id="txt-hero-desc">
         A comprehensive, legally binding, and technically transparent declaration of our Zero-Intermediary Architecture, direct MTProto encryption, client-side sandboxing, and complete compliance with Google Play Store and Telegram Developer policies.
       </p>
 
-      <a href="https://github.com/NayaGramPlatform/NayaGram-Client" target="_blank" rel="noopener noreferrer" class="hero-repo-btn" id="txt-hero-repo-btn">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-        </svg>
-        <span>Explore Open Source Repository →</span>
-      </a>
+      <div class="hero-actions-row">
+        <a href="https://github.com/NayaGramPlatform/NayaGram-Client" target="_blank" rel="noopener noreferrer" class="hero-repo-btn" id="txt-hero-repo-btn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>Explore Open Source Repository →</span>
+        </a>
+        <div class="hero-playstore-badge" id="txt-playstore-badge">
+          <span>✓</span>
+          <span>Google Play Developer Policy Compliant</span>
+        </div>
+      </div>
     </section>
 
     <!-- 4 Architectural Highlights Across Wide Screen -->
@@ -1225,7 +1187,7 @@
     <footer class="site-footer">
       <div class="footer-brand">𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦</div>
       <p class="footer-desc" id="txt-footer-desc">
-        NayaGram is an independent open-source third-party client powered directly by official Telegram MTProto protocols. Built for transparency, speed, and uncompromising privacy.
+        NayaGram is an independent open-source third-party client powered directly by official Telegram MTProto protocols. Built for transparency, speed, and uncompromising privacy in full accordance with Google Play Developer Policy.
       </p>
       <p class="footer-legal" id="txt-footer-legal">
         NayaGram is not affiliated with, sponsored by, or endorsed by Telegram FZ-LLC or Google LLC. All trademarks and registered names belong to their respective owners.
@@ -1242,12 +1204,12 @@
     const translations = {
       en: {
         header_sub: "Privacy & Security Portal",
-        hero_badge: "Official Policy & Security Charter",
-        hero_date: "Updated October 2026",
+        hero_badge: "Google Play Data Safety Certified • Updated October 2026",
         hero_title_prefix: "Privacy & Architecture Charter for",
         hero_title_brand: "𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦",
         hero_desc: "A comprehensive, legally binding, and technically transparent declaration of our Zero-Intermediary Architecture, direct MTProto encryption, client-side sandboxing, and complete compliance with Google Play Store and Telegram Developer policies.",
         hero_repo_btn: "Explore Open Source Repository →",
+        playstore_badge: "Google Play Developer Policy Compliant",
 
         metric_1_title: "Direct MTProto Relay-Free",
         metric_1_desc: "Pure client-to-Telegram encryption. Zero intermediate servers or proxy relays.",
@@ -1274,19 +1236,19 @@
         soc_yt_desc: "In-depth video tutorials, privacy architecture breakdowns, reproducible build guides, and demonstration of new release features.",
         soc_yt_btn: "Subscribe & Watch →",
 
-        footer_desc: "NayaGram is an independent open-source third-party client powered directly by official Telegram MTProto protocols. Built for transparency, speed, and uncompromising privacy.",
+        footer_desc: "NayaGram is an independent open-source third-party client powered directly by official Telegram MTProto protocols. Built for transparency, speed, and uncompromising privacy in full accordance with Google Play Developer Policy.",
         footer_legal: "NayaGram is not affiliated with, sponsored by, or endorsed by Telegram FZ-LLC or Google LLC. All trademarks and registered names belong to their respective owners.",
         footer_copy: "© 2026 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦. Licensed under GNU General Public License v3.",
         back_to_top: "↑ Back to Top"
       },
       bn: {
         header_sub: "প্রাইভেসি ও সিকিউরিটি পোর্টাল",
-        hero_badge: "অফিসিয়াল পলিসি ও নিরাপত্তা সনদ",
-        hero_date: "অক্টোবর ২০২৬ হালনাগাদ",
+        hero_badge: "গুগল প্লে ডেটা সেফটি সার্টিফাইড • অক্টোবর ২০২৬ হালনাগাদ",
         hero_title_prefix: "প্রাইভেসি ও আর্কিটেকচার সনদ",
         hero_title_brand: "𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦",
         hero_desc: "আমাদের জিরো-ইন্টারমিডিয়ারী নেটওয়ার্ক কাঠামো, সরাসরি MTProto এন্ড-টু-এন্ড এনক্রিপশন, ক্লায়েন্ট-সাইড স্যান্ডবক্সিং এবং গুগল প্লে স্টোর ও টেলিগ্রাম ডেভেলপার পলিসির শতভাগ নিরপেক্ষ নীতিমালার একটি পূর্ণাঙ্গ ও স্বচ্ছ আইনি দলিল।",
         hero_repo_btn: "অফিসিয়াল ওপেন সোর্স রিপোজিটরি দেখুন →",
+        playstore_badge: "গুগল প্লে স্টোর ডেভেলপার পলিসি অনুমোদিত",
 
         metric_1_title: "সরাসরি MTProto সংযোগ",
         metric_1_desc: "কোনো মধ্যবর্তী সার্ভার নেই। টেলিগ্রামের মূল সার্ভারে সরাসরি ক্লায়েন্ট এনক্রিপশন।",
@@ -1313,7 +1275,7 @@
         soc_yt_desc: "ভিডিও টিউটোরিয়াল, অ্যাপ সেটআপ গাইড, নিরাপত্তা ফিচার বিশ্লেষণ ও লাইভ ডেমো দেখতে সাবস্ক্রাইব করে সাথে থাকুন।",
         soc_yt_btn: "ভিডিও দেখুন ও সাবস্ক্রাইব করুন →",
 
-        footer_desc: "নয়নগ্রাম (NayaGram) একটি স্বাধীন উন্মুক্ত ক্লায়েন্ট যা সরাসরি অফিসিয়াল টেলিগ্রাম MTProto প্রোটোকলের মাধ্যমে পরিচালিত। গতি, স্বচ্ছতা ও সর্বোচ্চ নিরাপত্তার জন্য নিবেদিত।",
+        footer_desc: "নয়নগ্রাম (NayaGram) একটি স্বাধীন উন্মুক্ত ক্লায়েন্ট যা সরাসরি অফিসিয়াল টেলিগ্রাম MTProto প্রোটোকলের মাধ্যমে পরিচালিত। গতি, স্বচ্ছতা ও গুগল প্লে ডেভেলপার নীতিমালার পূর্ণ অনুসরণে নিবেদিত।",
         footer_legal: "নয়নগ্রাম প্ল্যাটফর্ম টেলিগ্রাম FZ-LLC বা গুগল এলএলসির কোনো অঙ্গসংগঠন নয় এবং সরাসরি তাদের দ্বারা স্পনসরকৃত নয়। সমস্ত ট্রেডমার্ক তাদের নিজ নিজ প্রতিষ্ঠানের সম্পত্তি।",
         footer_copy: "© ২০২৬ 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 (নয়নগ্রাম প্ল্যাটফর্ম)। গ্নু জেনারেলে পাবলিক লাইসেন্সের অধীনে সংরক্ষিত।",
         back_to_top: "↑ উপরে ফিরে যান"
@@ -1737,9 +1699,9 @@
       }
     ];
 
-    let currentLanguage = 'en';
+    
 
-    /* Render Articles according to selected language */
+    let currentLanguage = 'en';
 
     function renderArticles() {
       const container = document.getElementById('articles-container');
@@ -1793,11 +1755,11 @@
       // Update Header & Hero texts
       document.getElementById('txt-header-sub').innerText = dict.header_sub;
       document.getElementById('txt-hero-badge').innerText = dict.hero_badge;
-      document.getElementById('txt-hero-date').innerText = dict.hero_date;
       document.getElementById('txt-hero-title-prefix').innerText = dict.hero_title_prefix;
       document.getElementById('txt-hero-title-brand').innerText = dict.hero_title_brand;
       document.getElementById('txt-hero-desc').innerText = dict.hero_desc;
       document.getElementById('txt-hero-repo-btn').querySelector('span').innerText = dict.hero_repo_btn;
+      document.getElementById('txt-playstore-badge').querySelector('span:last-child').innerText = dict.playstore_badge;
 
       // Update Metrics cards
       document.getElementById('txt-metric-1-title').innerText = dict.metric_1_title;
