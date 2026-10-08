@@ -3,27 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy & Security Charter - NayaGram</title>
-  <meta name="description" content="Official Google Play Compliant Privacy Policy & Security Protocol for NayaGram Android Client.">
+  <title>Privacy Policy - NayaGram Messenger</title>
+  <meta name="description" content="Official Google Play Compliant Privacy Policy for NayaGram Android Client. Direct Telegram MTProto, zero third-party relays, and strict user data privacy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --tg-blue: #0088cc;
-      --tg-blue-hover: #0077b5;
-      --tg-blue-light: #f0f7fc;
-      --tg-border: #e2e8f0;
-      --tg-border-light: #edf2f7;
-      --tg-text: #1e293b;
-      --tg-text-muted: #64748b;
-      --tg-text-dark: #0f172a;
-      --tg-card: #ffffff;
-      --tg-bg: #f8fafc;
-      --badge-green: #059669;
-      --badge-green-bg: #ecfdf5;
-      --badge-blue: #0284c7;
-      --badge-blue-bg: #f0f9ff;
+      --deep-blue: #1E3A8A;
+      --soft-blue: #3B82F6;
+      --green: #10B981;
+      --white: #FFFFFF;
+      --soft-purple: #8B5CF6;
+      --bg-page: #F8FAFC;
+      --border-color: #E2E8F0;
+      --text-dark: #1E293B;
+      --text-muted: #475569;
     }
 
     * {
@@ -38,26 +33,30 @@
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--tg-bg);
-      color: var(--tg-text);
+      background-color: var(--bg-page);
+      color: var(--text-dark);
       line-height: 1.75;
       font-size: 15.5px;
+      font-weight: 500;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
-    /* Top Sticky Clean Navbar */
-    .top-nav {
+    .lang-bn body, [lang="bn"] {
+      font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Top Sticky Header */
+    .site-header {
       background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--tg-border);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 1px 3px rgba(30, 58, 138, 0.05);
     }
 
-    .nav-inner {
+    .header-inner {
       max-width: 900px;
       margin: 0 auto;
       padding: 12px 20px;
@@ -67,524 +66,979 @@
       gap: 12px;
     }
 
-    .brand-box {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      min-width: 0;
-      flex-shrink: 1;
-    }
-
-    .brand-img {
-      height: 38px;
-      width: 38px;
-      object-fit: contain;
-      flex-shrink: 0;
-      border-radius: 8px;
-    }
-
-    .brand-title {
-      font-weight: 800;
-      font-size: 19px;
-      color: var(--tg-text-dark);
-      letter-spacing: -0.4px;
-      white-space: nowrap;
-    }
-
-    .nav-tags {
-      display: flex;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-
-    .tag-pill {
-      font-size: 11.5px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 9999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      white-space: nowrap;
-    }
-
-    .tag-green {
-      background: var(--badge-green-bg);
-      color: var(--badge-green);
-      border: 1px solid rgba(5, 150, 105, 0.2);
-    }
-
-    .tag-blue {
-      background: var(--badge-blue-bg);
-      color: var(--badge-blue);
-      border: 1px solid rgba(2, 132, 199, 0.2);
-    }
-
-    /* Main Container */
-    .main-wrapper {
-      max-width: 880px;
-      margin: 32px auto 70px;
-      padding: 0 16px;
-    }
-
-    .doc-paper {
-      background: var(--tg-card);
-      border: 1px solid var(--tg-border);
-      border-radius: 20px;
-      box-shadow: 0 4px 25px -4px rgba(0, 0, 0, 0.05);
-      padding: 48px 42px;
-    }
-
-    /* Hero Section */
-    .doc-hero {
-      text-align: center;
-      border-bottom: 1px solid var(--tg-border-light);
-      padding-bottom: 28px;
-      margin-bottom: 32px;
-    }
-
-    .hero-logo {
-      height: 72px;
-      width: 72px;
-      margin: 0 auto 16px;
-      display: block;
-      object-fit: contain;
-      animation: float 4s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-    }
-
-    h1.doc-heading {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--tg-text-dark);
-      letter-spacing: -0.6px;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .doc-subtitle {
-      color: var(--tg-text-muted);
-      font-size: 14.5px;
-      max-width: 620px;
-      margin: 0 auto 16px;
-    }
-
-    .doc-metadata {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 13px;
-      color: var(--tg-text-muted);
-    }
-
-    /* Scroll Animation Reveal Classes */
-    .reveal-card {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      margin-bottom: 24px;
-    }
-
-    .reveal-card.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Lead Banner */
-    .lead-banner {
-      background: linear-gradient(135deg, #f0f7fc 0%, #e8f4fc 100%);
-      border-left: 5px solid var(--tg-blue);
-      border-radius: 0 14px 14px 0;
-      padding: 20px 24px;
-      margin-bottom: 32px;
-      font-size: 15px;
-      color: #1e3a5f;
-    }
-
-    /* Section Headings */
-    h2.section-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--tg-text-dark);
-      margin-top: 36px;
-      margin-bottom: 14px;
+    .brand-group {
       display: flex;
       align-items: center;
       gap: 10px;
+      text-decoration: none;
     }
 
-    .num-badge {
-      background: var(--tg-blue-light);
-      color: var(--tg-blue);
-      border: 1px solid rgba(0, 136, 204, 0.2);
-      width: 30px;
-      height: 30px;
+    .brand-logo-small {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
       border-radius: 8px;
+    }
+
+    .brand-name {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--deep-blue);
+      letter-spacing: -0.3px;
+    }
+
+    /* Language Switch Buttons */
+    .lang-switcher {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 14px;
+      background: #EFF6FF;
+      border: 1px solid var(--border-color);
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 4px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--deep-blue);
+      font-family: inherit;
+      font-size: 13px;
       font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-btn:hover {
+      color: var(--soft-blue);
+    }
+
+    .lang-btn.active {
+      background: var(--deep-blue);
+      color: var(--white);
+      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.25);
+    }
+
+    /* Main Container */
+    .page-wrapper {
+      max-width: 880px;
+      margin: 28px auto 60px;
+      padding: 0 16px;
+    }
+
+    /* Hero Center Card */
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px -2px rgba(30, 58, 138, 0.05);
+      padding: 36px 28px 28px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-logo {
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .hero-title {
+      font-size: 27px;
+      font-weight: 800;
+      color: var(--deep-blue);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 500;
+      max-width: 640px;
+      margin: 0 auto 16px;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .badge-pill {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .badge-blue {
+      background: #EFF6FF;
+      color: var(--deep-blue);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    .badge-green {
+      background: #ECFDF5;
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .badge-purple {
+      background: #F5F3FF;
+      color: var(--soft-purple);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+    }
+
+    /* Policy Content Sections (Cards) */
+    .policy-card {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      box-shadow: 0 4px 18px -2px rgba(30, 58, 138, 0.04);
+      padding: 28px 30px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .policy-card:hover {
+      box-shadow: 0 6px 24px -2px rgba(30, 58, 138, 0.08);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .section-num {
+      background: var(--deep-blue);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
       flex-shrink: 0;
     }
 
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--deep-blue);
+      letter-spacing: -0.4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-icon {
+      font-size: 19px;
+    }
+
     p {
-      color: var(--tg-text);
-      margin-bottom: 14px;
+      color: var(--text-dark);
       font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
 
     strong {
-      color: var(--tg-text-dark);
-      font-weight: 600;
+      color: var(--deep-blue);
+      font-weight: 700;
     }
 
-    ul.check-list {
+    /* Highlight Banner Box */
+    .highlight-box {
+      background: #F0FDF4;
+      border-left: 4px solid var(--green);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #065F46;
+    }
+
+    .highlight-box strong {
+      color: #047857;
+    }
+
+    .notice-box {
+      background: #F5F3FF;
+      border-left: 4px solid var(--soft-purple);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #4C1D95;
+    }
+
+    .notice-box strong {
+      color: #5B21B6;
+    }
+
+    /* Styled Lists */
+    ul.item-list {
       list-style: none;
-      margin: 14px 0 20px 0;
+      margin: 14px 0 16px 0;
     }
 
-    ul.check-list li {
+    ul.item-list li {
       position: relative;
       padding-left: 26px;
       margin-bottom: 12px;
-      color: #334155;
+      color: var(--text-dark);
       font-size: 14.5px;
+      font-weight: 500;
+      line-height: 1.65;
     }
 
-    ul.check-list li::before {
+    ul.item-list li::before {
       content: '✓';
       position: absolute;
       left: 2px;
       top: 0;
-      color: var(--tg-blue);
+      color: var(--soft-blue);
       font-weight: 800;
       font-size: 15px;
     }
 
-    .card-box {
-      background: #fafcff;
-      border: 1px solid #e0ecf8;
-      border-radius: 12px;
-      padding: 18px 22px;
-      margin: 18px 0;
-    }
-
-    .card-box h4 {
-      color: var(--tg-blue);
-      font-size: 15px;
-      margin-bottom: 6px;
-      font-weight: 700;
-    }
-
-    .security-grid {
+    /* Permission Grid */
+    .permission-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 14px;
-      margin: 18px 0;
+      margin-top: 14px;
     }
 
-    .grid-item {
-      background: #ffffff;
-      border: 1px solid var(--tg-border);
+    .perm-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 16px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      padding: 16px 18px;
     }
 
-    .grid-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    }
-
-    .grid-item h5 {
-      color: var(--tg-text-dark);
-      font-size: 14px;
-      margin-bottom: 6px;
+    .perm-card h4 {
+      color: var(--deep-blue);
+      font-size: 15px;
       font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .grid-item p {
-      font-size: 13px;
-      color: var(--tg-text-muted);
+    .perm-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
       margin-bottom: 0;
       line-height: 1.55;
     }
 
-    /* Contact Box */
-    .support-section {
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      border: 1px solid #cbd5e1;
-      border-radius: 14px;
-      padding: 24px 26px;
-      margin-top: 40px;
+    /* Community Links Grid */
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
     }
 
-    .support-section h3 {
-      font-size: 18px;
+    .community-link {
+      background: #EFF6FF;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--deep-blue);
       font-weight: 700;
-      color: var(--tg-text-dark);
-      margin-bottom: 10px;
-    }
-
-    .contact-row {
+      font-size: 14px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 12px;
-      font-size: 14.5px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      transition: all 0.2s ease;
     }
 
-    .copy-button {
-      background: var(--tg-blue);
-      color: #ffffff;
-      border: none;
-      font-size: 12px;
+    .community-link:hover {
+      background: var(--deep-blue);
+      color: var(--white);
+      border-color: var(--deep-blue);
+      transform: translateY(-2px);
+    }
+
+    .community-link span.channel-handle {
       font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .copy-button:hover {
-      background: var(--tg-blue-hover);
-    }
-
-    a {
-      color: var(--tg-blue);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid var(--tg-border-light);
-      color: var(--tg-text-muted);
+      color: var(--soft-blue);
       font-size: 13px;
     }
 
-    /* Mobile Responsive Optimizations */
-    @media (max-width: 680px) {
-      .doc-paper {
-        padding: 28px 18px;
-        border-radius: 14px;
+    .community-link:hover span.channel-handle {
+      color: #93C5FD;
+    }
+
+    /* Email Copy Row */
+    .email-box {
+      background: #F8FAFC;
+      border: 1px dashed var(--soft-blue);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .email-text {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--deep-blue);
+    }
+
+    .copy-btn {
+      background: var(--soft-blue);
+      color: var(--white);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--deep-blue);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    /* Language Display Controls */
+    .content-en {
+      display: block;
+    }
+    .content-bn {
+      display: none;
+    }
+
+    body.lang-bn-active .content-en {
+      display: none;
+    }
+    body.lang-bn-active .content-bn {
+      display: block;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 640px) {
+      .hero-card {
+        padding: 24px 16px 20px;
       }
-      h1.doc-heading {
+      .hero-title {
         font-size: 22px;
       }
-      .main-wrapper {
-        margin: 16px auto 40px;
+      .policy-card {
+        padding: 20px 18px;
       }
-      .tag-pill {
-        font-size: 11px;
-        padding: 3px 8px;
+      .section-title {
+        font-size: 18px;
       }
-      .brand-title {
-        font-size: 17px;
+      .section-header {
+        gap: 8px;
+      }
+      .header-inner {
+        padding: 10px 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Clean Responsive Header (NO OVERFLOW ON MOBILE) -->
-  <nav class="top-nav">
-    <div class="nav-inner">
-      <div class="brand-box">
-        <img src="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png" alt="NayaGram Logo" class="brand-img" onerror="this.style.display='none'">
-        <span class="brand-title">NayaGram</span>
-      </div>
-      <div class="nav-tags">
-        <span class="tag-pill tag-green">🛡️ Verified</span>
-        <span class="tag-pill tag-blue">Play Store 2026</span>
+  <!-- Sticky Header with Clean Language Switcher -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-group">
+        <img src="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png" alt="NayaGram Logo" class="brand-logo-small">
+        <span class="brand-name">NayaGram</span>
+      </a>
+
+      <!-- Language Buttons -->
+      <div class="lang-switcher" role="group" aria-label="Language Selector">
+        <button type="button" class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">
+          <span>🇬🇧</span> English
+        </button>
+        <button type="button" class="lang-btn" id="btn-lang-bn" onclick="setLanguage('bn')">
+          <span>🇧🇩</span> বাংলা
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <div class="main-wrapper">
-    <div class="doc-paper">
+  <main class="page-wrapper">
 
-      <!-- Hero Header -->
-      <div class="doc-hero reveal-card">
-        <img src="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png" alt="NayaGram Platform" class="hero-logo">
-        <h1 class="doc-heading">NayaGram Privacy Policy & Security Charter</h1>
-        <p class="doc-subtitle">
-          Official Cryptographic Data Protection Protocol, Zero-Surveillance Architecture, and Compliance Standards for NayaGram Android.
+    <!-- Top Centered Hero Card -->
+    <div class="hero-card">
+      <img src="https://i.postimg.cc/65K5k2WS/𝐍𝐚𝐲𝐚-𝐆𝐫𝐚𝐦-𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦.png" alt="NayaGram Platform Logo" class="hero-logo">
+      
+      <!-- English Hero -->
+      <div class="content-en">
+        <h1 class="hero-title">NayaGram Privacy Policy</h1>
+        <p class="hero-subtitle">
+          Transparent data protection charter, direct Telegram MTProto routing, and Google Play compliance standards.
         </p>
-        <div class="doc-metadata">
-          <span>📅 <strong>Last Updated:</strong> October 2026</span>
-          <span>•</span>
-          <span>🔒 <strong>Protocol:</strong> Telegram MTProto 2.0</span>
-          <span>•</span>
-          <span>🏛️ <strong>Entity:</strong> NayaGram Platform</span>
+        <div class="hero-badges">
+          <span class="badge-pill badge-blue">💎 Telegram MTProto 2.0</span>
+          <span class="badge-pill badge-green">🛡️ Verified Direct Cloud</span>
+          <span class="badge-pill badge-purple">📅 Last Updated: October 2026</span>
         </div>
       </div>
 
-      <!-- Lead Banner -->
-      <div class="lead-banner reveal-card">
-        <strong>Radical Commitment to Privacy:</strong> NayaGram operates on a direct zero-intermediary infrastructure. When you use NayaGram, your chats, voice calls, documents, and media connect <strong>directly to official Telegram cloud servers</strong> using end-to-end and transport-layer military-grade MTProto encryption. NayaGram Platform maintains zero message relay servers, zero telemetry collectors, and zero backdoors.
-      </div>
-
-      <!-- Section 1 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">1</span> Core Architectural Principles & Direct Telegram API</h2>
-        <p>NayaGram is an enhanced third-party client built strictly on the open-source Telegram MTProto client architecture:</p>
-        <ul class="check-list">
-          <li><strong>Direct Server Routing:</strong> Every communication packet originates on your device and connects directly to Telegram official datacenters. NayaGram hosts NO proxy layers or middleman servers between you and the Telegram network.</li>
-          <li><strong>Military-Grade MTProto Cryptography:</strong> All network traffic uses the Telegram MTProto 2.0 protocol (Diffie-Hellman 2048-bit key exchange, SHA-256, and AES-256-IGE encryption).</li>
-          <li><strong>End-to-End Encrypted Secret Chats:</strong> Secret Chats are encrypted exclusively on user endpoints. The cryptographic keys reside on the sender's and receiver's devices only. Neither Telegram nor NayaGram can decrypt or inspect Secret Chats.</li>
-        </ul>
-        <div class="card-box">
-          <h4>🔒 Official Cloud Data Protection</h4>
-          <p style="margin-bottom: 0; font-size: 14px; color: #334155;">
-            For cloud chat data stored within the global Telegram infrastructure, data management and retention are governed directly by Telegram FZ-LLC under the <a href="https://telegram.org/privacy" target="_blank" rel="noopener">Telegram Official Privacy Policy</a>.
-          </p>
+      <!-- Bangla Hero -->
+      <div class="content-bn">
+        <h1 class="hero-title">নয়াগ্রাম গোপনীয়তা নীতি</h1>
+        <p class="hero-subtitle">
+          স্বচ্ছ ডেটা সুরক্ষা সনদ, সরাসরি টেলিগ্রাম এমটিপ্রোটো (MTProto) যোগাযোগ এবং গুগল প্লে নীতিমালার পূর্ণাঙ্গ বিবরণ।
+        </p>
+        <div class="hero-badges">
+          <span class="badge-pill badge-blue">💎 টেলিগ্রাম এমটিপ্রোটো ২.০</span>
+          <span class="badge-pill badge-green">🛡️ কোনো মধ্যবর্তী সার্ভার নেই</span>
+          <span class="badge-pill badge-purple">📅 সর্বশেষ আপডেট: অক্টোবর ২০২৬</span>
         </div>
       </div>
+    </div>
 
-      <!-- Section 2 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">2</span> Radical Zero-Surveillance Policy: What We Never Collect</h2>
-        <p>We believe in absolute data minimization. NayaGram strictly enforces the following guarantees:</p>
-        <div class="security-grid">
-          <div class="grid-item">
-            <h5>🚫 Zero Message Interception</h5>
-            <p>We do not read, monitor, intercept, copy, or upload your messages, contacts, or voice recordings to any external server.</p>
-          </div>
-          <div class="grid-item">
-            <h5>🚫 Zero Administrative Backdoors</h5>
-            <p>No administrator, developer, or operator possesses technical capabilities to view private chats, force account changes, or delete remote messages.</p>
-          </div>
-          <div class="grid-item">
-            <h5>🚫 Zero Third-Party Analytics SDKs</h5>
-            <p>NayaGram contains NO Google AdMob, NO Facebook SDK, NO Firebase Analytics, and NO invasive behavioral tracking telemetry.</p>
-          </div>
-          <div class="grid-item">
-            <h5>🚫 Zero Device Fingerprinting</h5>
-            <p>We never track or monetize your Android Advertising ID (AAID), IMEI, or device hardware identifiers.</p>
-          </div>
-        </div>
+    <!-- ==================== SECTION A.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">A.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">👤</span>
+          <span class="content-en">Who We Are</span>
+          <span class="content-bn">আমরা কারা</span>
+        </h2>
       </div>
 
-      <!-- Section 3 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">3</span> Sandbox Local Storage & Cryptographic Security</h2>
-        <p>All operational data necessary for client functionality is restricted entirely to your local device sandbox:</p>
-        <ul class="check-list">
-          <li><strong>Authentication Tokens (AuthKey):</strong> Your Telegram authentication keys are generated during login and stored inside encrypted app-private sandbox storage protected by Android OS security isolation.</li>
-          <li><strong>Local Cache Management:</strong> Cached images, voice notes, stickers, and documents reside locally and can be permanently cleared at any time via <strong>Settings &gt; Data and Storage &gt; Storage Usage</strong>.</li>
-          <li><strong>Advanced Power Utilities:</strong> Features such as Message Scheduler, Auto-Reply, and local message logs execute strictly in-memory on your device without communicating with external endpoints.</li>
-        </ul>
-      </div>
-
-      <!-- Section 4 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">4</span> Android Device Permissions & Legitimate Usage</h2>
-        <p>In full compliance with Google Play Developer Program Policies, NayaGram requests only runtime permissions required to perform standard messaging functions:</p>
-        <ul class="check-list">
-          <li><strong>Internet Access:</strong> Required to establish encrypted MTProto communication with Telegram cloud servers.</li>
-          <li><strong>Storage / Media:</strong> Required to download and save documents, photos, audio, and videos to your device, and to select media you choose to send.</li>
-          <li><strong>Camera & Microphone:</strong> Accessed ONLY when you actively record video messages, snap photos in-app, or engage in encrypted voice/video calls.</li>
-          <li><strong>Contacts (Optional):</strong> Synchronizes phone contacts locally with your Telegram account upon your explicit consent. Your phonebook is NEVER uploaded to any marketing server.</li>
-          <li><strong>Notifications:</strong> Required on Android 13+ (POST_NOTIFICATIONS) to deliver instant message and call notifications.</li>
-        </ul>
-      </div>
-
-      <!-- Section 5 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">5</span> NG Studio Internal Diagnostic Boundaries</h2>
-        <p>NayaGram includes an internal engineering suite designated as <strong>NG Studio</strong>:</p>
-        <ul class="check-list">
-          <li>NG Studio is restricted strictly to designated internal developer IDs for rendering tests, layout debugging, and UI frame measurement.</li>
-          <li><strong>Strict Boundary Guarantee:</strong> NG Studio has <strong>zero administrative authority</strong> over ordinary users. It possesses NO mechanism to view, intercept, or tamper with any user's personal communications, accounts, or messages.</li>
-        </ul>
-      </div>
-
-      <!-- Section 6 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">6</span> Account Deletion & Right to Erasure (GDPR)</h2>
-        <p>You hold unconditional ownership and control over your digital footprint:</p>
-        <ul class="check-list">
-          <li><strong>Instant Device Purge:</strong> Logging out or uninstalling NayaGram immediately deletes all local cryptographic keys and cached assets from your phone.</li>
-          <li><strong>Complete Account Deletion:</strong> You can permanently wipe your account and all associated cloud data at any time via <strong>Settings &gt; Privacy and Security &gt; Delete My Account</strong>.</li>
-          <li><strong>Automated Self-Destruct:</strong> You can configure an inactivity auto-delete interval (1, 3, 6, or 12 months) under your security settings.</li>
-        </ul>
-      </div>
-
-      <!-- Section 7 -->
-      <div class="reveal-card">
-        <h2 class="section-title"><span class="num-badge">7</span> Google Play Store Compliance & Child Protection</h2>
-        <p>NayaGram operates under strict compliance with global digital safety regulations:</p>
-        <ul class="check-list">
-          <li><strong>Google Play Policies:</strong> Full adherence to User Data, Permissions, Financial Fraud, and Deceptive Behavior Policies.</li>
-          <li><strong>Children's Privacy Protection (COPPA):</strong> NayaGram is designed for general audiences and is not directed at children under the age of 13. We do not knowingly solicit or collect data from minors.</li>
-          <li><strong>Open-Source Compliance:</strong> Distributed in accordance with the GNU General Public License as an open ecosystem client.</li>
-        </ul>
-      </div>
-
-      <!-- Section 8: Support -->
-      <div class="support-section reveal-card">
-        <h3>8. Official Inquiries & Security Governance</h3>
+      <div class="content-en">
         <p>
-          For regulatory verification, vulnerability disclosures, or questions regarding our data protection policies, please contact our official team:
+          <strong>NayaGram Platform</strong> is an independent software development initiative dedicated to building modern, efficient, and user-friendly communication solutions. Our mission is to provide users with a secure, highly responsive, and reliable messaging experience designed for everyday personal and productivity needs.
         </p>
+        <p>
+          NayaGram for Android is developed with great care and integrity in Bangladesh for users globally, ensuring full respect for individual privacy rights and transparent data handling practices.
+        </p>
+      </div>
 
-        <div class="contact-row">
-          <span>📧 <strong>Official Support:</strong> <a href="mailto:support.nayagram@gmail.com">support.nayagram@gmail.com</a></span>
-          <button class="copy-button" onclick="navigator.clipboard.writeText('support.nayagram@gmail.com'); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy Email', 2000);">Copy Email</button>
+      <div class="content-bn">
+        <p>
+          <strong>নয়াগ্রাম প্ল্যাটফর্ম (NayaGram Platform)</strong> একটি স্বতন্ত্র সফটওয়্যার ও প্রযুক্তি উদ্যোগ, যা আধুনিক, দ্রুতগতির এবং ব্যবহারকারী-বান্ধব যোগাযোগ মাধ্যম তৈরির লক্ষ্যে কাজ করে। আমাদের লক্ষ্য হলো প্রতিটি ব্যবহারকারীর জন্য একটি নিরাপদ, গতিশীল ও বিশ্বস্ত মেসেজিং অভিজ্ঞতা নিশ্চিত করা।
+        </p>
+        <p>
+          নয়াগ্রাম অ্যান্ড্রয়েড ক্লায়েন্টটি বাংলাদেশে আন্তরিকতা ও নিষ্ঠার সাথে আন্তর্জাতিক মানের সুরক্ষায় তৈরি করা হয়েছে, যা সকল ব্যবহারকারীর ব্যক্তিগত গোপনীয়তার অধিকার রক্ষা ও স্বচ্ছ ডেটা ব্যবস্থাপনায় অঙ্গীকারবদ্ধ।
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION A.2 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">A.2</span>
+        <h2 class="section-title">
+          <span class="section-icon">🤝</span>
+          <span class="content-en">Our Relationship with Telegram</span>
+          <span class="content-bn">টেলিগ্রামের সাথে আমাদের সম্পর্ক</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          <strong>Independent Third-Party Client:</strong> NayaGram is an independent third-party client built upon the official open-source Telegram for Android source code, distributed under the GNU General Public License (GPL) v2.0 or later.
+        </p>
+        <div class="notice-box">
+          <strong>Important Trademark Notice:</strong> NayaGram is not affiliated with, sponsored by, endorsed by, or operated by <strong>Telegram FZ-LLC</strong> or Telegram Messenger Inc. Telegram is a registered trademark of its respective owners.
         </div>
+        <p>
+          While NayaGram provides customized user interface enhancements, productivity utilities, and optimized localized features, the core messaging protocol and datacenter infrastructure remain strictly powered by Telegram.
+        </p>
+      </div>
 
-        <div class="contact-row">
-          <span>🏛️ <strong>Platform Organization:</strong> NayaGram Platform</span>
+      <div class="content-bn">
+        <p>
+          <strong>স্বতন্ত্র থার্ড-পার্টি ক্লায়েন্ট:</strong> নয়াগ্রাম হলো অফিসিয়াল টেলিগ্রাম অ্যান্ড্রয়েড ওপেন-সোর্স কোডের ওপর নির্মিত একটি স্বতন্ত্র থার্ড-পার্টি অ্যাপ, যা জিএনইউ জেনারেল পাবলিক লাইসেন্স (GNU GPL v2.0 বা পরবর্তী) অনুযায়ী প্রকাশিত।
+        </p>
+        <div class="notice-box">
+          <strong>গুরুত্বপূর্ণ আইনি নোটিশ:</strong> নয়াগ্রাম কোনোভাবেই <strong>Telegram FZ-LLC</strong> বা Telegram Messenger Inc. এর সাথে প্রাতিষ্ঠানিকভাবে যুক্ত, তাদের দ্বারা পরিচালিত বা অনুমোদিত নয়। 'টেলিগ্রাম' তাদের নিজস্ব ট্রেডমার্ক।
         </div>
+        <p>
+          নয়াগ্রাম ব্যবহারকারীদের সুবিধার্থে উন্নত ইন্টারফেস, বাংলা ভাষা সহায়তা এবং প্রয়োজনীয় ফিচার যুক্ত করেছে; তবে মূল মেসেজিং প্রোটোকল ও ডেটাসেন্টার সম্পূর্ণভাবে টেলিগ্রামের অফিসিয়াল পরিকাঠামোর মাধ্যমেই পরিচালিত হয়।
+        </p>
+      </div>
+    </section>
 
-        <div class="contact-row">
-          <span>🛡️ <strong>Application:</strong> NayaGram Android Client</span>
+    <!-- ==================== SECTION B.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">B.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">💎</span>
+          <span class="content-en">How Your Data Flows</span>
+          <span class="content-bn">আপনার ডেটা যেভাবে আদান-প্রদান হয়</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          The architectural foundation of NayaGram guarantees absolute direct communication with official Telegram servers:
+        </p>
+        <ul class="item-list">
+          <li><strong>Direct Official MTProto Connection:</strong> All your text messages, media files, voice notes, video messages, and call setup packets travel directly between your Android device and Telegram’s official cloud servers via the encrypted MTProto protocol.</li>
+          <li><strong>Zero Intermediate Servers:</strong> NayaGram Platform operates <strong>zero middleman servers, zero proxy relays, and zero intercepting cloud databases</strong>. Your network traffic never routes through any external server controlled by NayaGram.</li>
+          <li><strong>End-to-End Encrypted Secret Chats:</strong> When using Telegram Secret Chats, messages are encrypted exclusively on sender and receiver devices. Neither Telegram servers nor NayaGram can decrypt or inspect the contents of Secret Chats.</li>
+          <li><strong>Cloud Data Governance:</strong> Cloud chat history and cloud media stored on Telegram datacenters are governed directly under the official <a href="https://telegram.org/privacy" target="_blank" rel="noopener" style="color: var(--soft-blue); font-weight: 700; text-decoration: underline;">Telegram Privacy Policy</a>.</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>Key Guarantee:</strong> Your login authentication keys (AuthKey) are generated directly with Telegram and never leave your local device sandbox.
         </div>
       </div>
 
-      <footer>
-        © 2026 NayaGram Platform. All Rights Reserved.<br>
-        Built on the Telegram Open Source Client Architecture under GNU General Public License.
-      </footer>
+      <div class="content-bn">
+        <p>
+          নয়াগ্রামের কারিগরি পরিকাঠামো নিশ্চিত করে যে আপনার সমস্ত তথ্য সরাসরি অফিশিয়াল টেলিগ্রাম সার্ভারের সাথেই আদান-প্রদান হবে:
+        </p>
+        <ul class="item-list">
+          <li><strong>সরাসরি অফিশিয়াল MTProto সংযোগ:</strong> আপনার পাঠানো প্রতিটি মেসেজ, ছবি, অডিও, ভিডিও এবং কল ডেটা সরাসরি আপনার মোবাইল ডিভাইস থেকে টেলিগ্রামের অফিসিয়াল ক্লাউড সার্ভারে এনক্রিপ্টেড MTProto প্রোটোকলের মাধ্যমে পৌঁছায়।</li>
+          <li><strong>কোনো মধ্যবর্তী সার্ভার নেই:</strong> নয়াগ্রামের <strong>কোনো নিজস্ব মধ্যবর্তী সার্ভার, প্রক্সি রিলে বা মেসেজ রিসিভ করার ডেটাবেস নেই</strong>। আপনার কোনো মেসেজ বা ফাইল কখনোই নয়গ্রামের কোনো সার্ভারে যায় না।</li>
+          <li><strong>এন্ড-টু-এন্ড এনক্রিপ্টেড সিক্রেট চ্যাট:</strong> সিক্রেট চ্যাট সম্পূর্ণভাবে প্রেরক ও প্রাপকের ডিভাইসেই এনক্রিপ্ট ও ডিক্রিপ্ট হয়। টেলিগ্রাম বা নয়াগ্রাম—কারোর পক্ষেই এই মেসেজ পড়া প্রযুক্তিগতভাবে অসম্ভব।</li>
+          <li><strong>ক্লাউড ডেটা পরিচালনা:</strong> আপনার সাধারণ ক্লাউড চ্যাট টেলিগ্রামের আন্তর্জাতিক সার্ভারেই সংরক্ষিত থাকে এবং তা সরাসরি <a href="https://telegram.org/privacy" target="_blank" rel="noopener" style="color: var(--soft-blue); font-weight: 700; text-decoration: underline;">টেলিগ্রামের অফিসিয়াল প্রাইভেসি পলিসি</a> অনুযায়ী পরিচালিত হয়।</li>
+        </ul>
 
-    </div>
-  </div>
+        <div class="highlight-box">
+          <strong>মৌলিক নিশ্চয়তা:</strong> আপনার লগইন অথেন্টিকেশন কি (AuthKey) সরাসরি টেলিগ্রামের সাথে তৈরি হয় এবং এটি কেবল আপনার ফোনের নিরাপদ স্যান্ডবক্সেই থাকে।
+        </div>
+      </div>
+    </section>
 
-  <!-- Smooth Scroll Reveal Script -->
+    <!-- ==================== SECTION B.2 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">B.2</span>
+        <h2 class="section-title">
+          <span class="section-icon">🛡️</span>
+          <span class="content-en">What We Never Collect</span>
+          <span class="content-bn">আমরা যা কখনোই সংগ্রহ করি না</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          In full accordance with Google Play Developer Policies and global privacy regulations, NayaGram enforces strict data minimization:
+        </p>
+        <ul class="item-list">
+          <li><strong>No Message Interception or Reading:</strong> We do not read, log, scan, or upload your personal messages, contact lists, or call logs to any external server.</li>
+          <li><strong>No Sale of Personal Data:</strong> We never sell, rent, monetize, or trade user data with any third party, data broker, or marketing entity.</li>
+          <li><strong>No Behavioral Tracking by Default:</strong> We do not track your browsing habits, cross-app activity, or physical movements. NayaGram does not build behavioral profiles on users.</li>
+          <li><strong>No Remote Control Backdoors:</strong> There are no administrative backdoors to access user chats or force remote modifications to private accounts.</li>
+        </ul>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          গুগল প্লে ডেভেলপার পলিসি এবং আন্তর্জাতিক ডেটা সুরক্ষা আইন মেনে নয়াগ্রাম সর্বনিম্ন ডেটা ব্যবহারের কঠোর নীতি অনুসরণ করে:
+        </p>
+        <ul class="item-list">
+          <li><strong>মেসেজ না পড়া বা আপলোড না করা:</strong> আমরা কখনোই আপনার কোনো ব্যক্তিগত মেসেজ, চ্যাট হিস্ট্রি, অডিও বা কল রেকর্ড পড়ি না, সংরক্ষণ করি না এবং কোনো বাইরের সার্ভারে আপলোড করি না।</li>
+          <li><strong>ডেটা বিক্রি না করা:</strong> আমরা কখনোই ব্যবহারকারীর ব্যক্তিগত তথ্য কোনো বিজ্ঞাপনদাতা, ব্রোকার বা তৃতীয় পক্ষের কাছে বিক্রি বা হস্তান্তর করি না।</li>
+          <li><strong>কোনো আচরণগত ট্র্যাকিং নেই:</strong> আপনি কোন অ্যাপে কী করছেন বা আপনার ফোনের অন্যান্য ব্যক্তিগত কার্যকলাপ আমরা কখনোই ট্র্যাক করি না। কোনো প্রোফাইলিং করা হয় না।</li>
+          <li><strong>কোনো গোপন ব্যাকডোর নেই:</strong> কারো ব্যক্তিগত একাউন্টে প্রবেশ করা বা চ্যাট দেখার কোনো ধরনের ব্যাকডোর বা প্রশাসনিক নিয়ন্ত্রণ আমাদের নেই।</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION C.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">C.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">🔒</span>
+          <span class="content-en">Permissions We Request</span>
+          <span class="content-bn">আমাদের প্রয়োজনীয় ডিভাইসের পারমিশনসমূহ</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          NayaGram requests only standard Android permissions strictly necessary to deliver legitimate messaging and communication features:
+        </p>
+        <div class="permission-grid">
+          <div class="perm-card">
+            <h4>🌐 Internet Access</h4>
+            <p>Required to establish secure MTProto communication with official Telegram servers to send and receive messages.</p>
+          </div>
+          <div class="perm-card">
+            <h4>📷 Camera</h4>
+            <p>Accessed only when you choose to take photos, capture video messages, or participate in video calls within the app.</p>
+          </div>
+          <div class="perm-card">
+            <h4>🎤 Microphone</h4>
+            <p>Accessed only when you actively record voice notes, create video notes, or make voice/video calls.</p>
+          </div>
+          <div class="perm-card">
+            <h4>📁 Storage / Media</h4>
+            <p>Required to send, download, and save photos, videos, and documents to your local device memory as directed by you.</p>
+          </div>
+          <div class="perm-card">
+            <h4>👥 Contacts (Optional)</h4>
+            <p>Allows you to find friends who use Telegram. Contact syncing is optional and synced directly with your official Telegram account.</p>
+          </div>
+          <div class="perm-card">
+            <h4>🔔 Notifications</h4>
+            <p>Required on Android 13+ (POST_NOTIFICATIONS) to alert you promptly of incoming messages and incoming calls.</p>
+          </div>
+          <div class="perm-card">
+            <h4>📍 Location (Explicit Only)</h4>
+            <p>Accessed strictly when you explicitly choose to share your live location or nearby place with a contact in a chat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          নয়াগ্রাম শুধুমাত্র সেই সমস্ত অ্যান্ড্রয়েড পারমিশন চেয়ে থাকে যা একটি আধুনিক মেসেজিং অ্যাপ চালানোর জন্য অপরিহার্য:
+        </p>
+        <div class="permission-grid">
+          <div class="perm-card">
+            <h4>🌐 ইন্টারনেট সংযোগ</h4>
+            <p>মেসেজ পাঠানো ও গ্রহণের জন্য টেলিগ্রাম ক্লাউড সার্ভারের সাথে নিরাপদ এনক্রিপ্টেড সংযোগ তৈরি করতে প্রয়োজন।</p>
+          </div>
+          <div class="perm-card">
+            <h4>📷 ক্যামেরা</h4>
+            <p>শুধুমাত্র যখন আপনি সরাসরি ছবি তুলতে চান, ভিডিও মেসেজ তৈরি করতে চান অথবা ভিডিও কলে কথা বলেন তখন ব্যবহৃত হয়।</p>
+          </div>
+          <div class="perm-card">
+            <h4>🎤 মাইক্রোফোন</h4>
+            <p>শুধুমাত্র যখন আপনি ভয়েস মেসেজ রেকর্ড করেন বা অডিও/ভিডিও কলে কথা বলেন কেবল তখনই চালু হয়।</p>
+          </div>
+          <div class="perm-card">
+            <h4>📁 স্টোরেজ ও মিডিয়া</h4>
+            <p>আপনার পাঠানো বা ডাউনলোড করা ছবি, ভিডিও ও ডকুমেন্টস আপনার ডিভাইসে সেভ করা বা পাঠানোর জন্য প্রয়োজন।</p>
+          </div>
+          <div class="perm-card">
+            <h4>👥 কন্টাক্টস (ঐচ্ছিক)</h4>
+            <p>আপনার পরিচিতদের মধ্যে কারা টেলিগ্রাম ব্যবহার করেন তা জানতে সাহায্য করে। এটি সম্পূর্ণ ঐচ্ছিক এবং টেলিগ্রামের সাথে সিঙ্ক হয়।</p>
+          </div>
+          <div class="perm-card">
+            <h4>🔔 নোটিফিকেশন</h4>
+            <p>অ্যান্ড্রয়েড ১৩+ এ নতুন মেসেজ বা ইনকামিং কলের বার্তা তাৎক্ষণিকভাবে আপনার স্ক্রিনে দেখানোর জন্য ব্যবহৃত হয়।</p>
+          </div>
+          <div class="perm-card">
+            <h4>📍 লোকেশন (শুধুমাত্র শেয়ার করলে)</h4>
+            <p>শুধুমাত্র যখন আপনি নিজে চ্যাটের মধ্যে কারো সাথে আপনার বর্তমান লোকেশন শেয়ার করার সিদ্ধান্ত নেন কেবল তখনই কাজ করে।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION D.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">D.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">📱</span>
+          <span class="content-en">Local Storage Only</span>
+          <span class="content-bn">লোকাল স্টোরেজ ও ডিভাইসের সুরক্ষা</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          All application settings, custom preferences, and cached media reside strictly within your device's isolated Android application sandbox:
+        </p>
+        <ul class="item-list">
+          <li><strong>Operating System Isolation:</strong> Other Android applications cannot access your NayaGram private files or tokens due to Android's built-in application sandboxing architecture.</li>
+          <li><strong>Local Feature Execution:</strong> Client-side productivity features (such as scheduled message triggers or smart reply drafts) execute strictly in-memory on your phone without transmitting diagnostic data to external endpoints.</li>
+          <li><strong>User Storage Control:</strong> You maintain complete authority to view and clear cached media at any time by navigating to <strong>Settings &gt; Data and Storage &gt; Storage Usage</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          অ্যাপ্লিকেশনের সমস্ত ব্যক্তিগত সেটিংস এবং ক্যাশ ফাইল আপনার ফোনের নিজস্ব অ্যান্ড্রয়েড স্যান্ডবক্স মেমরিতেই সুরক্ষিত থাকে:
+        </p>
+        <ul class="item-list">
+          <li><strong>অপারেটিং সিস্টেম সুরক্ষা:</strong> অ্যান্ড্রয়েডের নিজস্ব স্যান্ডবক্সিং ব্যবস্থার কারণে অন্য কোনো অ্যাপ আপনার নয়গ্রামের সংরক্ষিত ডেটা পড়তে বা দেখতে পারে না।</li>
+          <li><strong>লোকাল ফিচার প্রসেসিং:</strong> অ্যাপের বিশেষ ফিচারসমূহ (যেমন শিডিউল মেসেজ বা স্মার্ট ড্রাফট) সম্পূর্ণ আপনার মোবাইলের প্রসেসরেই কাজ করে, কোনো এক্সটার্নাল সার্ভারে যায় না।</li>
+          <li><strong>ক্যাশ মেমোরি নিয়ন্ত্রণ:</strong> আপনি যেকোনো সময় অ্যাপের ভেতরে <strong>Settings &gt; Data and Storage &gt; Storage Usage</strong> এ গিয়ে জমা হওয়া ক্যাশ ডাটা এক ক্লিকেই মুছে ফেলতে পারবেন।</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION E.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">E.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">📢</span>
+          <span class="content-en">Future Advertising Policy</span>
+          <span class="content-bn">ভবিষ্যৎ বিজ্ঞাপন নীতিমালা</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          We maintain absolute honesty and full transparency regarding advertising within NayaGram:
+        </p>
+        <ul class="item-list">
+          <li><strong>Currently Ad-Free:</strong> At present, NayaGram does <strong>NOT</strong> display any commercial banner ads, interstitial popups, or paid advertisements within the application.</li>
+          <li><strong>Technical SDK Presence:</strong> The Google Mobile Ads (AdMob) SDK libraries may exist in the codebase for potential operational evaluation or future sustainability. However, no advertising modules are actively serving ads to users.</li>
+          <li><strong>Notice Before Any Future Activation:</strong> If advertising is enabled in future releases, it will be designed to be completely non-intrusive. Most importantly, <strong>this Privacy Policy will be officially updated and users will be clearly informed in advance</strong> before any advertising functionality is switched on.</li>
+          <li><strong>Zero Data Sharing for Profiling:</strong> Even in the event of future advertising, private message contents and personal contact information will never be accessed or shared for advertising purposes.</li>
+        </ul>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          নয়াগ্রামের বিজ্ঞাপনের বিষয়ে আমরা শতভাগ স্পষ্ট ও সত্য তথ্য তুলে ধরছি:
+        </p>
+        <ul class="item-list">
+          <li><strong>বর্তমানে সম্পূর্ণ বিজ্ঞাপনমুক্ত:</strong> বর্তমানে নয়গ্রাম অ্যাপের ভেতরে কোনো ধরনের ব্যানার বিজ্ঞাপন, পপ-আপ বা বাণিজ্যিক বিজ্ঞাপন দেখানো হয় না।</li>
+          <li><strong>কোডবেসে SDK এর উপস্থিতি:</strong> ভবিষ্যতে অ্যাপের রক্ষণাবেক্ষণ ও পরিচালনার স্বার্থে গুগল অ্যাডমব (Google AdMob SDK) লাইব্রেরি কোডে যুক্ত থাকতে পারে, তবে বর্তমানে এটি কোনো বিজ্ঞাপন প্রদর্শন করছে না।</li>
+          <li><strong>ভবিষ্যতে চালু করার পূর্বশর্ত:</strong> ভবিষ্যতে যদি কখনো পরিচ্ছন্ন ও স্বাভাবিক বিজ্ঞাপন চালু করার সিদ্ধান্ত নেওয়া হয়, তবে <strong>অবশ্যই ব্যবহারকারীদের আগে নোটিফিকেশনের মাধ্যমে অবহিত করা হবে এবং এই পলিসি পেজটি আপডেট করা হবে</strong>।</li>
+          <li><strong>চ্যাটের তথ্য কখনো বিজ্ঞাপনে নয়:</strong> কোনো অবস্থাতেই আপনার চ্যাট বা মেসেজের কোনো তথ্য বিজ্ঞাপনের জন্য ব্যবহার বা কারো কাছে প্রকাশ করা হবে না।</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION F.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">F.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">🗑️</span>
+          <span class="content-en">Account Deletion & Your Rights</span>
+          <span class="content-bn">অ্যাকাউন্ট মুছে ফেলা এবং আপনার অধিকার</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          You possess unconditional ownership and control over your account and communication footprint:
+        </p>
+        <ul class="item-list">
+          <li><strong>Official Account Deletion:</strong> You can permanently delete your Telegram account and all associated cloud data at any time directly through the app by going to:
+            <br>
+            <strong>Settings &gt; Privacy and Security &gt; Delete My Account</strong>
+          </li>
+          <li><strong>Telegram Core Process:</strong> This action invokes Telegram's official account termination protocol, which permanently purges your cloud profile, chats, media, and contacts from Telegram servers.</li>
+          <li><strong>Local Data Removal:</strong> Uninstalling NayaGram or logging out immediately deletes all local cryptographic authentication keys, cached messages, and database files from your device.</li>
+        </ul>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          আপনার একাউন্ট এবং তথ্যের ওপর আপনার রয়েছে ১০০% পূর্ণ নিয়ন্ত্রণ ও অধিকার:
+        </p>
+        <ul class="item-list">
+          <li><strong>অফিসিয়াল একাউন্ট মুছে ফেলা:</strong> আপনি যেকোনো সময় আপনার টেলিগ্রাম একাউন্ট ও সকল ক্লাউড ডেটা স্থায়ীভাবে ডিলিট করতে পারবেন। এজন্য অ্যাপের ভেতরে যান:
+            <br>
+            <strong>Settings &gt; Privacy and Security &gt; Delete My Account</strong>
+          </li>
+          <li><strong>অফিসিয়াল টেলিগ্রাম প্রসেস:</strong> এই প্রক্রিয়ার মাধ্যমে টেলিগ্রামের মূল সার্ভার থেকে আপনার প্রোফাইল, সমস্ত চ্যাট এবং শেয়ার করা মিডিয়া চিরতরে মুছে যাবে।</li>
+          <li><strong>লোকাল ডেটা মুছে ফেলা:</strong> নয়গ্রাম অ্যাপ আনইনস্টল (Uninstall) করা বা লগআউট করার সাথে সাথে আপনার ফোনে থাকা সমস্ত লোকাল কী এবং ক্যাশ ফাইল স্বয়ংক্রিয়ভাবে মুছে যায়।</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION G.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">G.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">👶</span>
+          <span class="content-en">Children’s Privacy</span>
+          <span class="content-bn">শিশুদের গোপনীয়তা সুরক্ষা</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          NayaGram is intended for a general audience and is not directed at children under the age of 13. In compliance with the Children's Online Privacy Protection Act (COPPA) and international child safety standards, we do not knowingly solicit, collect, or process personal data from children under 13.
+        </p>
+        <p>
+          If a parent or legal guardian discovers that a child under 13 has provided personal data without parental consent, please contact us immediately so that appropriate steps can be taken in coordination with the underlying platform.
+        </p>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          নয়াগ্রাম সাধারণ প্রাপ্তবয়স্ক ব্যবহারকারীদের জন্য তৈরি এবং এটি ১৩ বছরের কম বয়সী শিশুদের জন্য পরিচালিত নয়। চিলড্রেনস অনলাইন প্রাইভেসি প্রোটেকশন অ্যাক্ট (COPPA) অনুযায়ী আমরা জেনেশুনে ১৩ বছরের কম বয়সী শিশুদের কোনো ব্যক্তিগত তথ্য সংগ্রহ বা প্রক্রিয়াজাত করি না।
+        </p>
+        <p>
+          কোনো অভিভাবক যদি জানতে পারেন যে তাদের ১৩ বছরের কম বয়সী সন্তান কোনো সম্মতি ছাড়া তথ্য প্রদান করেছে, তবে অনুগ্রহ করে অবিলম্বে আমাদের সাথে যোগাযোগ করুন যাতে দ্রুত ব্যবস্থা গ্রহণ করা যায়।
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION H.1 ==================== -->
+    <section class="policy-card">
+      <div class="section-header">
+        <span class="section-num">H.1</span>
+        <h2 class="section-title">
+          <span class="section-icon">💬</span>
+          <span class="content-en">Community & Official Contact</span>
+          <span class="content-bn">অফিশিয়াল কমিউনিটি ও যোগাযোগ</span>
+        </h2>
+      </div>
+
+      <div class="content-en">
+        <p>
+          For questions regarding this Privacy Policy, compliance verification, or general support inquiries, please connect with us through our official channels:
+        </p>
+
+        <div class="community-grid">
+          <a href="https://t.me/NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>✈️ Telegram</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+          <a href="https://x.com/NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>✖️ Twitter / X</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+          <a href="https://youtube.com/@NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>▶️ YouTube</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+          <a href="https://facebook.com/NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>📘 Facebook</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+        </div>
+
+        <div class="email-box">
+          <div>
+            <span style="font-size: 13px; color: var(--text-muted); display: block;">Official Support & Privacy Inquiries:</span>
+            <span class="email-text">support.nayagram@gmail.com</span>
+          </div>
+          <button type="button" class="copy-btn" onclick="copyEmail(this)">Copy Email</button>
+        </div>
+      </div>
+
+      <div class="content-bn">
+        <p>
+          এই গোপনীয়তা নীতি সম্পর্কে কোনো প্রশ্ন, যাচাইকরণ বা সহায়তার জন্য আমাদের অফিসিয়াল কমিউনিটি চ্যানেলগুলোর মাধ্যমে যোগাযোগ করুন:
+        </p>
+
+        <div class="community-grid">
+          <a href="https://t.me/NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>✈️ টেলিগ্রাম</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+          <a href="https://x.com/NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>✖️ টুইটার / এক্স</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+          <a href="https://youtube.com/@NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>▶️ ইউটিউব</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+          <a href="https://facebook.com/NayaGramPro" target="_blank" rel="noopener" class="community-link">
+            <span>📘 ফেসবুক</span>
+            <span class="channel-handle">@NayaGramPro</span>
+          </a>
+        </div>
+
+        <div class="email-box">
+          <div>
+            <span style="font-size: 13px; color: var(--text-muted); display: block;">অফিসিয়াল সাপোর্ট ও সহায়তা ইমেইল:</span>
+            <span class="email-text">support.nayagram@gmail.com</span>
+          </div>
+          <button type="button" class="copy-btn" onclick="copyEmail(this)">ইমেইল কপি করুন</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 <strong>NayaGram Platform</strong>. All Rights Reserved.</p>
+      <p style="font-size: 12.5px; margin-top: 4px; color: var(--text-muted);">
+        Built on the official Telegram open-source client codebase under GNU General Public License v2.0 or later.
+      </p>
+    </footer>
+
+  </main>
+
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const reveals = document.querySelectorAll(".reveal-card");
+    function setLanguage(lang) {
+      const btnEn = document.getElementById('btn-lang-en');
+      const btnBn = document.getElementById('btn-lang-bn');
 
-      const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        reveals.forEach((el) => {
-          const elementTop = el.getBoundingClientRect().top;
-          const elementVisible = 60;
-          if (elementTop < windowHeight - elementVisible) {
-            el.classList.add("active");
-          }
-        });
-      };
+      if (lang === 'bn') {
+        document.body.classList.add('lang-bn-active');
+        document.documentElement.lang = 'bn';
+        btnBn.classList.add('active');
+        btnEn.classList.remove('active');
+        try { localStorage.setItem('nayagram_policy_lang', 'bn'); } catch(e) {}
+      } else {
+        document.body.classList.remove('lang-bn-active');
+        document.documentElement.lang = 'en';
+        btnEn.classList.add('active');
+        btnBn.classList.remove('active');
+        try { localStorage.setItem('nayagram_policy_lang', 'en'); } catch(e) {}
+      }
+    }
 
-      window.addEventListener("scroll", revealOnScroll);
-      revealOnScroll(); // Trigger initial
+    function copyEmail(btn) {
+      navigator.clipboard.writeText('support.nayagram@gmail.com').then(() => {
+        const isBn = document.body.classList.contains('lang-bn-active');
+        const orig = btn.innerText;
+        btn.innerText = isBn ? 'কপি হয়েছে!' : 'Copied!';
+        btn.style.background = '#10B981';
+        setTimeout(() => {
+          btn.innerText = orig;
+          btn.style.background = '';
+        }, 2000);
+      });
+    }
+
+    // Auto-detect saved preference
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const saved = localStorage.getItem('nayagram_policy_lang');
+        if (saved === 'bn') {
+          setLanguage('bn');
+        }
+      } catch(e) {}
     });
   </script>
-
 </body>
 </html>
