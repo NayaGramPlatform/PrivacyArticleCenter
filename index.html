@@ -342,15 +342,25 @@
     }
 
     /* Prefix Headline: BIGGER, RADIANT SAPPHIRE BLUE / CYAN, NO BLACK! */
+    .hero-headline-straight {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 12px;
+      margin: 0 auto 16px;
+      padding: 4px 14px 12px;
+      max-width: 100%;
+    }
+
     .hero-title-prefix {
-      font-size: 2.35rem;
+      font-size: clamp(1.35rem, 2.5vw, 2.25rem);
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #1E40AF;
-      margin-bottom: 8px;
+      white-space: nowrap;
       line-height: 1.35;
-      padding-bottom: 6px;
-      display: block;
+      display: inline-block;
       transition: color 0.3s ease;
     }
 
@@ -359,21 +369,24 @@
       text-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
     }
 
-    /* Main Brand Name: 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦
-       CRITICAL FIX FOR DESCENDERS: line-height: 1.35, padding-bottom: 16px, display: inline-block
-       This guarantees letters like 'y', 'g', 'p' are NEVER clipped at the bottom! */
     .hero-brand-name {
-      font-size: 3.8rem;
+      font-size: clamp(1.5rem, 3.2vw, 2.75rem);
       font-weight: 900;
       letter-spacing: -0.02em;
       line-height: 1.35;
-      padding-top: 4px;
-      padding-bottom: 16px;
+      white-space: nowrap;
+      padding-bottom: 2px;
       display: inline-block;
       background: linear-gradient(135deg, #0284C7 0%, #8B5CF6 50%, #10B981 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-headline-straight {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1030,10 +1043,11 @@
         </div>
       </div>
 
-      <!-- Prefix: Large, Radiant Sapphire/Cyan (NO BLACK!) -->
-      <div class="hero-title-prefix" id="txt-hero-title-prefix">Privacy & Architecture Charter for</div>
-      <!-- Brand Name: 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 with guaranteed anti-clip descenders -->
-      <h2 class="hero-brand-name" id="txt-hero-title-brand">𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦</h2>
+      <!-- Unified Headline: Kept in ONE Straight Line without breaking -->
+      <h2 class="hero-headline-straight">
+        <span class="hero-title-prefix" id="txt-hero-title-prefix">Privacy & Security Charter:</span>
+        <span class="hero-brand-name" id="txt-hero-title-brand">𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦</span>
+      </h2>
 
       <p class="hero-subtitle" id="txt-hero-desc">
         A comprehensive, legally binding, and technically transparent declaration of our Zero-Intermediary Architecture, direct MTProto encryption, client-side sandboxing, and complete compliance with Google Play Store and Telegram Developer policies.
@@ -1205,7 +1219,7 @@
       en: {
         header_sub: "Privacy & Security Portal",
         hero_badge: "Google Play Data Safety Certified • Updated October 2026",
-        hero_title_prefix: "Privacy & Architecture Charter for",
+        hero_title_prefix: "Privacy & Security Charter:",
         hero_title_brand: "𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦",
         hero_desc: "A comprehensive, legally binding, and technically transparent declaration of our Zero-Intermediary Architecture, direct MTProto encryption, client-side sandboxing, and complete compliance with Google Play Store and Telegram Developer policies.",
         hero_repo_btn: "Explore Open Source Repository →",
@@ -1244,7 +1258,7 @@
       bn: {
         header_sub: "প্রাইভেসি ও সিকিউরিটি পোর্টাল",
         hero_badge: "গুগল প্লে ডেটা সেফটি সার্টিফাইড • অক্টোবর ২০২৬ হালনাগাদ",
-        hero_title_prefix: "প্রাইভেসি ও আর্কিটেকচার সনদ",
+        hero_title_prefix: "প্রাইভেসি ও সিকিউরিটি সনদ:",
         hero_title_brand: "𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦",
         hero_desc: "আমাদের জিরো-ইন্টারমিডিয়ারী নেটওয়ার্ক কাঠামো, সরাসরি MTProto এন্ড-টু-এন্ড এনক্রিপশন, ক্লায়েন্ট-সাইড স্যান্ডবক্সিং এবং গুগল প্লে স্টোর ও টেলিগ্রাম ডেভেলপার পলিসির শতভাগ নিরপেক্ষ নীতিমালার একটি পূর্ণাঙ্গ ও স্বচ্ছ আইনি দলিল।",
         hero_repo_btn: "অফিসিয়াল ওপেন সোর্স রিপোজিটরি দেখুন →",
