@@ -25,7 +25,7 @@
   <!-- Typography: Plus Jakarta Sans for English, Hind Siliguri for Bengali -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;600;700;800&family=Noto+Sans+Bengali:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -1108,6 +1108,573 @@
       background: var(--splash-subtle-bg);
       border-color: var(--splash-blue-primary);
     }
+  
+    /* ========================================================
+       BENGALI HIGH-CONTRAST BOLD TYPOGRAPHY (অত্যন্ত স্পষ্ট ও গাঢ় ফন্ট)
+       ======================================================== */
+    body.lang-bn, body.lang-bn * {
+      font-family: 'Hind Siliguri', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif !important;
+    }
+
+    body.lang-bn {
+      font-weight: 600;
+      color: #0F172A;
+    }
+
+    body.dark-mode.lang-bn {
+      color: #F8FAFC;
+    }
+
+    body.lang-bn .policy-body p,
+    body.lang-bn .policy-body li,
+    body.lang-bn .perm-card-desc,
+    body.lang-bn .sandbox-desc,
+    body.lang-bn .metric-desc,
+    body.lang-bn .social-card-desc,
+    body.lang-bn .footer-desc,
+    body.lang-bn .hero-subtitle {
+      font-weight: 600 !important;
+      font-size: 1.05rem !important;
+      line-height: 1.95 !important;
+      letter-spacing: 0.015em;
+      color: #1E293B !important;
+    }
+
+    body.dark-mode.lang-bn .policy-body p,
+    body.dark-mode.lang-bn .policy-body li,
+    body.dark-mode.lang-bn .perm-card-desc,
+    body.dark-mode.lang-bn .sandbox-desc,
+    body.dark-mode.lang-bn .metric-desc,
+    body.dark-mode.lang-bn .social-card-desc,
+    body.dark-mode.lang-bn .footer-desc,
+    body.dark-mode.lang-bn .hero-subtitle {
+      color: #F1F5F9 !important;
+      font-weight: 600 !important;
+    }
+
+    body.lang-bn strong {
+      font-weight: 800 !important;
+      color: #0284C7 !important;
+    }
+
+    body.dark-mode.lang-bn strong {
+      color: #38BDF8 !important;
+    }
+
+    body.lang-bn .policy-title {
+      font-weight: 800 !important;
+      font-size: 1.48rem !important;
+      letter-spacing: -0.01em;
+    }
+
+    /* Font Size Zoom Modifiers */
+    body.zoom-small { font-size: 14.5px; }
+    body.zoom-default { font-size: 16px; }
+    body.zoom-large { font-size: 18px; }
+    body.zoom-xlarge { font-size: 20px; }
+
+    /* ========================================================
+       LOGO SIZE UPGRADE & GENTLE FLOATING BREATHING ANIMATION
+       ======================================================== */
+    @keyframes logoFloatMini {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-3px) rotate(2deg); filter: drop-shadow(0 6px 14px rgba(2, 132, 199, 0.45)); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .brand-mini-logo {
+      width: 50px !important; /* Slightly larger as requested */
+      height: 50px !important;
+      border-radius: 14px;
+      object-fit: contain;
+      background: transparent;
+      flex-shrink: 0;
+      filter: drop-shadow(0 4px 12px rgba(2, 132, 199, 0.38));
+      animation: logoFloatMini 3.5s ease-in-out infinite;
+    }
+
+    @keyframes heroLogoFloat {
+      0% {
+        transform: translateY(0px) scale(1) rotate(0deg);
+        filter: drop-shadow(0 12px 28px rgba(2, 132, 199, 0.42));
+      }
+      50% {
+        transform: translateY(-9px) scale(1.035) rotate(1.5deg);
+        filter: drop-shadow(0 22px 42px rgba(56, 189, 248, 0.65));
+      }
+      100% {
+        transform: translateY(0px) scale(1) rotate(0deg);
+        filter: drop-shadow(0 12px 28px rgba(2, 132, 199, 0.42));
+      }
+    }
+
+    .hero-logo-img {
+      position: relative;
+      z-index: 2;
+      width: 160px !important; /* Slightly larger as requested */
+      height: 160px !important;
+      object-fit: contain;
+      background: transparent;
+      animation: heroLogoFloat 4.5s ease-in-out infinite;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-logo-halo {
+      width: 210px !important;
+      height: 210px !important;
+    }
+
+    /* ========================================================
+       BEAUTIFUL LANGUAGE BUTTONS WITH EMOJIS & THEME BUTTON
+       ======================================================== */
+    .lang-toggle-group {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(2, 132, 199, 0.08);
+      border: 1.5px solid rgba(2, 132, 199, 0.25);
+      border-radius: 30px;
+      padding: 3px;
+      gap: 4px;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.06);
+    }
+
+    body.dark-mode .lang-toggle-group {
+      background: rgba(30, 41, 59, 0.85);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 7px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .lang-emoji {
+      font-size: 1.05rem;
+      line-height: 1;
+    }
+
+    .lang-btn:hover {
+      color: var(--splash-blue-primary);
+      transform: translateY(-1px);
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38);
+      transform: scale(1.02);
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(2, 132, 199, 0.08);
+      border: 1.5px solid rgba(2, 132, 199, 0.25);
+      color: #0284C7;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.06);
+      flex-shrink: 0;
+    }
+
+    .theme-toggle-btn:hover {
+      transform: rotate(20deg) scale(1.08);
+      border-color: #0284C7;
+      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.3);
+    }
+
+    body.dark-mode .theme-toggle-btn {
+      background: rgba(30, 41, 59, 0.85);
+      border-color: rgba(56, 189, 248, 0.35);
+      color: #FCD34D;
+      box-shadow: 0 4px 14px rgba(252, 211, 77, 0.15);
+    }
+
+    /* Sidebar Trigger Button */
+    .sidebar-open-btn {
+      height: 44px;
+      padding: 0 14px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(2, 132, 199, 0.14));
+      border: 1.5px solid rgba(139, 92, 246, 0.3);
+      color: #7C3AED;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(139, 92, 246, 0.08);
+      flex-shrink: 0;
+    }
+
+    .sidebar-open-btn:hover {
+      background: linear-gradient(135deg, #8B5CF6, #0284C7);
+      color: #FFFFFF !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35);
+    }
+
+    body.dark-mode .sidebar-open-btn {
+      background: rgba(139, 92, 246, 0.18);
+      border-color: rgba(167, 139, 250, 0.4);
+      color: #C4B5FD;
+    }
+
+    body.dark-mode .sidebar-open-btn:hover {
+      background: linear-gradient(135deg, #8B5CF6, #38BDF8);
+      color: #0B1120 !important;
+    }
+
+    .sidebar-btn-tag {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========================================================
+       SIDEBAR OFF-CANVAS DRAWER STYLES
+       ======================================================== */
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .sidebar-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sidebar-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 420px;
+      max-width: 90vw;
+      height: 100vh;
+      background: var(--card-bg);
+      border-left: 1px solid var(--border-color);
+      box-shadow: -15px 0 45px rgba(0, 0, 0, 0.28);
+      z-index: 1000;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sidebar-drawer.active {
+      transform: translateX(0);
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--header-bg);
+    }
+
+    .sidebar-header-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sidebar-title-badge {
+      font-size: 1.5rem;
+    }
+
+    .sidebar-header-title h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    .sidebar-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .sidebar-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(2, 132, 199, 0.08);
+      border: 1px solid var(--border-color);
+      color: var(--text-dark);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .sidebar-close-btn:hover {
+      background: rgba(239, 68, 68, 0.15);
+      color: #EF4444;
+      border-color: #EF4444;
+      transform: rotate(90deg);
+    }
+
+    .sidebar-content {
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .sidebar-card {
+      background: var(--bg-page);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sb-card-badge {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--splash-blue-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .sb-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    .sb-card-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .sb-security-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sb-security-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.86rem;
+      color: var(--text-dark);
+      line-height: 1.45;
+    }
+
+    .sb-security-list code {
+      background: rgba(2, 132, 199, 0.12);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      color: #0284C7;
+    }
+
+    .sb-status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .dot-green { background: #10B981; box-shadow: 0 0 8px #10B981; }
+    .dot-cyan { background: #06B6D4; box-shadow: 0 0 8px #06B6D4; }
+    .dot-purple { background: #8B5CF6; box-shadow: 0 0 8px #8B5CF6; }
+    .dot-blue { background: #0284C7; box-shadow: 0 0 8px #0284C7; }
+
+    .sb-zoom-controls {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .sb-zoom-btn {
+      padding: 7px 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .sb-zoom-btn:hover, .sb-zoom-btn.active {
+      background: linear-gradient(135deg, #0284C7, #0369A1);
+      color: #FFFFFF;
+      border-color: #0284C7;
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    }
+
+    .sb-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #0284C7, #0369A1);
+      color: #FFFFFF;
+      border: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    }
+
+    .sb-action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.45);
+    }
+
+    .sb-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 240px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .sb-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .sb-nav-item:hover {
+      background: rgba(2, 132, 199, 0.1);
+      border-color: #0284C7;
+      color: #0284C7;
+      transform: translateX(4px);
+    }
+
+    .sb-nav-tag {
+      background: rgba(2, 132, 199, 0.15);
+      color: #0284C7;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .sb-external-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .sb-ext-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .sb-ext-btn:hover {
+      border-color: #0284C7;
+      color: #0284C7;
+      transform: translateY(-2px);
+    }
+
+    .sb-ext-danger:hover {
+      border-color: #EF4444;
+      color: #EF4444;
+    }
+
+    /* Toast notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #0F172A;
+      color: #38BDF8;
+      border: 1px solid #38BDF8;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast-notification.active {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -1115,6 +1682,7 @@
   <canvas id="sensor-canvas"></canvas>
 
   <div class="main-wrapper">
+    <!-- Top Sticky Header -->
     <!-- Top Sticky Header -->
     <header class="sticky-header">
       <div class="header-main-bar">
@@ -1127,17 +1695,35 @@
         </a>
 
         <div class="header-actions">
+          <!-- Language Switcher with Rich Emojis -->
           <div class="lang-toggle-group">
-            <button class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">English</button>
-            <button class="lang-btn" id="btn-lang-bn" onclick="setLanguage('bn')">বাংলা</button>
+            <button class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">
+              <span class="lang-emoji">🇬🇧</span>
+              <span>English</span>
+            </button>
+            <button class="lang-btn" id="btn-lang-bn" onclick="setLanguage('bn')">
+              <span class="lang-emoji">🇧🇩</span>
+              <span>বাংলা</span>
+            </button>
           </div>
 
+          <!-- Quick Feature Hub Sidebar Button -->
+          <button class="sidebar-open-btn" id="btn-sidebar-open" onclick="openSidebar()" aria-label="Open Features Hub" title="Open Features & Quick Navigation Hub">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="13" y2="18"></line>
+            </svg>
+            <span class="sidebar-btn-tag">Hub</span>
+          </button>
+
+          <!-- Dark/Light Mode Switcher with Elegant Size & Glow -->
           <button class="theme-toggle-btn" id="btn-theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
-            <svg id="theme-icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none;">
+            <svg id="theme-icon-sun" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" style="display:none;">
               <circle cx="12" cy="12" r="5"></circle>
               <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
             </svg>
-            <svg id="theme-icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg id="theme-icon-moon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
             </svg>
           </button>
@@ -1702,6 +2288,14 @@
         soc_yt_desc: "In-depth video tutorials, privacy architecture breakdowns, reproducible build guides, and demonstration of new release features.",
         soc_yt_btn: "Subscribe & Watch →",
 
+                txt_sb_title: "NayaGram Feature Hub",
+        txt_sb_sub: "Security & Quick Navigation",
+        txt_sb_sec_title: "Zero-Data Architecture",
+        txt_sb_zoom_title: "Font Size Adjuster",
+        txt_sb_share_title: "Verified Policy URL",
+        txt_sb_share_desc: "Copy the certified HTTPS link to this policy for official audits and Play Store submissions.",
+        txt_copy_btn: "Copy Official Policy Link",
+        txt_sb_nav_title: "Jump to Policy Section",
         footer_desc: "NayaGram is an independent open-source third-party client powered directly by official Telegram MTProto protocols. Built for transparency, speed, and uncompromising privacy in full accordance with Google Play Developer Policy.",
         footer_legal: "NayaGram is not affiliated with, sponsored by, or endorsed by Telegram FZ-LLC or Google LLC. All trademarks and registered names belong to their respective owners.",
         footer_copy: "© 2026 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦. Licensed under GNU General Public License v3.",
@@ -1741,6 +2335,14 @@
         soc_yt_desc: "ভিডিও টিউটোরিয়াল, অ্যাপ সেটআপ গাইড, নিরাপত্তা ফিচার বিশ্লেষণ ও লাইভ ডেমো দেখতে সাবস্ক্রাইব করে সাথে থাকুন।",
         soc_yt_btn: "ভিডিও দেখুন ও সাবস্ক্রাইব করুন →",
 
+                txt_sb_title: "নয়নগ্রাম ফিচার ও নেভিগেশন হাব",
+        txt_sb_sub: "সিকিউরিটি ভেরিফিকেশন ও দ্রুত নেভিগেশন",
+        txt_sb_sec_title: "জিরো-ডেটা আর্কিটেকচার সনদ",
+        txt_sb_zoom_title: "ফন্ট সাইজ জুম কন্ট্রোল",
+        txt_sb_share_title: "ভেরিফাইড পলিসি লিংক শেয়ার",
+        txt_sb_share_desc: "গুগল প্লে স্টোর নিরীক্ষা ও অফিশিয়াল ভেরিফিকেশনের জন্য পলিসির সার্টিফিকেট লিংক কপি করুন।",
+        txt_copy_btn: "অফিসিয়াল পলিসি লিংক কপি করুন",
+        txt_sb_nav_title: "যেকোনো সেকশনে দ্রুত যান",
         footer_desc: "নয়নগ্রাম (NayaGram) একটি স্বাধীন উন্মুক্ত ক্লায়েন্ট যা সরাসরি অফিসিয়াল টেলিগ্রাম MTProto প্রোটোকলের মাধ্যমে পরিচালিত। গতি, স্বচ্ছতা ও গুগল প্লে ডেভেলপার নীতিমালার পূর্ণ অনুসরণে নিবেদিত।",
         footer_legal: "নয়নগ্রাম প্ল্যাটফর্ম টেলিগ্রাম FZ-LLC বা গুগল এলএলসির কোনো অঙ্গসংগঠন নয় এবং সরাসরি তাদের দ্বারা স্পনসরকৃত নয়। সমস্ত ট্রেডমার্ক তাদের নিজ নিজ প্রতিষ্ঠানের সম্পত্তি।",
         footer_copy: "© ২০২৬ 𝐍𝐚𝐲𝐚𝐆𝐫𝐚𝐦 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 (নয়নগ্রাম প্ল্যাটফর্ম)। গ্নু জেনারেলে পাবলিক লাইসেন্সের অধীনে সংরক্ষিত।",
@@ -2273,6 +2875,15 @@
       document.getElementById('txt-footer-copy').innerText = dict.footer_copy;
       document.getElementById('txt-back-to-top').innerText = dict.back_to_top;
 
+            // Update Sidebar texts if present
+      if (document.getElementById('txt-sb-title')) document.getElementById('txt-sb-title').innerText = dict.txt_sb_title || "NayaGram Feature Hub";
+      if (document.getElementById('txt-sb-sub')) document.getElementById('txt-sb-sub').innerText = dict.txt_sb_sub || "Security & Quick Navigation";
+      if (document.getElementById('txt-sb-sec-title')) document.getElementById('txt-sb-sec-title').innerText = dict.txt_sb_sec_title || "Zero-Data Architecture";
+      if (document.getElementById('txt-sb-zoom-title')) document.getElementById('txt-sb-zoom-title').innerText = dict.txt_sb_zoom_title || "Font Size Adjuster";
+      if (document.getElementById('txt-sb-share-title')) document.getElementById('txt-sb-share-title').innerText = dict.txt_sb_share_title || "Verified Policy URL";
+      if (document.getElementById('txt-sb-share-desc')) document.getElementById('txt-sb-share-desc').innerText = dict.txt_sb_share_desc || "";
+      if (document.getElementById('txt-copy-btn')) document.getElementById('txt-copy-btn').innerText = dict.txt_copy_btn || "Copy Official Policy Link";
+      if (document.getElementById('txt-sb-nav-title')) document.getElementById('txt-sb-nav-title').innerText = dict.txt_sb_nav_title || "Jump to Policy Section";
       renderArticles();
     }
 
@@ -2309,7 +2920,7 @@
       });
     }
 
-    /* Dynamic Sensor & Aquatic Network Canvas Animation (Smooth 60fps, Zero Stutter) */
+    /* Radiant Celestial & Aquatic Sensor Constellation (Vivid, High-Contrast, 60fps) */
     (function() {
       const canvas = document.getElementById('sensor-canvas');
       if (!canvas) return;
@@ -2325,36 +2936,41 @@
       resize();
       window.addEventListener('resize', resize, { passive: true });
 
-      // Pause when tab not visible to save 100% battery and prevent lag
       document.addEventListener('visibilitychange', () => {
         isVisible = !document.hidden;
         if (isVisible) lastTime = performance.now();
       });
 
-      // Optimal particle count: 20 on mobile, 35 on desktop (Guarantees 60fps with zero stutter)
-      const count = window.innerWidth < 768 ? 20 : 36;
-      const particles = [];
-      const colorPalettes = [
-        { r: 56, g: 189, b: 248 },  // Electric Blue
-        { r: 6, g: 182, b: 212 },   // Aquatic Cyan
-        { r: 139, g: 92, b: 246 },  // Violet Glow
-        { r: 16, g: 185, b: 129 }   // Emerald Spark
+      // Distinct, saturated, radiant color palette (Clearly visible in both Light and Dark modes!)
+      const palette = [
+        { r: 2, g: 132, b: 199, name: 'Sapphire' },   // #0284C7 Vibrant Blue
+        { r: 6, g: 182, b: 212, name: 'Cyan' },       // #06B6D4 Neon Cyan
+        { r: 16, g: 185, b: 129, name: 'Emerald' },   // #10B981 Mint Emerald
+        { r: 139, g: 92, b: 246, name: 'Violet' },    // #8B5CF6 Electric Violet
+        { r: 244, g: 63, b: 94, name: 'Rose' },       // #F43F5E Coral Spark
+        { r: 245, g: 158, b: 11, name: 'Amber' }      // #F59E0B Golden Star
       ];
 
+      // Balanced count for silky 60fps: 22 on mobile, 38 on desktop
+      const count = window.innerWidth < 768 ? 22 : 38;
+      const particles = [];
+
       for (let i = 0; i < count; i++) {
-        const c = colorPalettes[i % colorPalettes.length];
+        const c = palette[i % palette.length];
+        const isOrb = i % 4 === 0; // Layer 1: Ambient glowing orbs; Layer 2: Sensor nodes
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          baseRadius: Math.random() * 2.2 + 1.8,
-          phase: Math.random() * Math.PI * 2,
-          speed: Math.random() * 0.35 + 0.25,
+          baseRadius: isOrb ? Math.random() * 3.5 + 2.5 : Math.random() * 2.2 + 1.6,
+          speed: Math.random() * 0.4 + 0.25,
           angle: Math.random() * Math.PI * 2,
+          phase: Math.random() * Math.PI * 2,
+          isOrb: isOrb,
           c: c
         });
       }
 
-      let pointer = { x: -999, y: -999, radius: 130 };
+      let pointer = { x: -999, y: -999, radius: 140 };
 
       window.addEventListener('mousemove', (e) => {
         pointer.x = e.clientX;
@@ -2393,62 +3009,63 @@
         for (let i = 0; i < particles.length; i++) {
           const p = particles[i];
 
-          // Gentle organic sinusoidal drift (flowing like tranquil water particles)
-          p.angle += Math.sin(timeSec * 0.5 + p.phase) * 0.02;
+          // Graceful organic sinusoidal fluid drift
+          p.angle += Math.sin(timeSec * 0.4 + p.phase) * 0.025;
           p.x += Math.cos(p.angle) * p.speed * (dt * 60);
-          p.y += (Math.sin(p.angle) * p.speed + 0.15) * (dt * 60);
+          p.y += (Math.sin(p.angle) * p.speed + 0.12) * (dt * 60);
 
           // Wrap edges smoothly
-          if (p.x < -20) p.x = width + 20;
-          if (p.x > width + 20) p.x = -20;
-          if (p.y < -20) p.y = height + 20;
-          if (p.y > height + 20) p.y = -20;
+          if (p.x < -30) p.x = width + 30;
+          if (p.x > width + 30) p.x = -30;
+          if (p.y < -30) p.y = height + 30;
+          if (p.y > height + 30) p.y = -30;
 
-          // Gentle pointer repulsion
+          // Pointer interaction
           const dx = p.x - pointer.x;
           const dy = p.y - pointer.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < pointer.radius && dist > 0) {
             const force = (pointer.radius - dist) / pointer.radius;
-            p.x += (dx / dist) * force * 3;
-            p.y += (dy / dist) * force * 3;
+            p.x += (dx / dist) * force * 3.5;
+            p.y += (dy / dist) * force * 3.5;
           }
 
-          // Luminescent breathing glow
-          const currentRadius = p.baseRadius + Math.sin(timeSec * 2 + p.phase) * 0.5;
-          const alpha = 0.45 + Math.sin(timeSec * 1.5 + p.phase) * 0.2;
+          // Luminous pulsing breathing radius & alpha
+          const currentRadius = p.baseRadius + Math.sin(timeSec * 2.2 + p.phase) * 0.7;
+          const alpha = 0.55 + Math.sin(timeSec * 1.8 + p.phase) * 0.25;
 
-          // Soft radial glow aura
-          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, currentRadius * 3);
-          grad.addColorStop(0, `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${alpha})`);
-          grad.addColorStop(0.5, `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${alpha * 0.3})`);
+          // Outer Radiant Halo Ring (Clearly visible with rich saturation!)
+          const haloRadius = currentRadius * (p.isOrb ? 4.5 : 3.2);
+          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, haloRadius);
+          grad.addColorStop(0, `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${alpha * 0.9})`);
+          grad.addColorStop(0.4, `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${alpha * 0.35})`);
           grad.addColorStop(1, `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, 0)`);
 
           ctx.beginPath();
-          ctx.arc(p.x, p.y, currentRadius * 3, 0, Math.PI * 2);
+          ctx.arc(p.x, p.y, haloRadius, 0, Math.PI * 2);
           ctx.fillStyle = grad;
           ctx.fill();
 
-          // Core node
+          // Intense Core Node
           ctx.beginPath();
           ctx.arc(p.x, p.y, currentRadius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${alpha + 0.2})`;
+          ctx.fillStyle = `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${Math.min(1, alpha + 0.35)})`;
           ctx.fill();
 
-          // Connect nearby nodes with delicate aquatic filaments
+          // Connecting shimmering energy filaments
           for (let j = i + 1; j < particles.length; j++) {
             const p2 = particles[j];
             const connDx = p.x - p2.x;
             const connDy = p.y - p2.y;
             const connDist = Math.sqrt(connDx * connDx + connDy * connDy);
 
-            if (connDist < 125) {
-              const lineAlpha = (1 - connDist / 125) * 0.22;
+            if (connDist < 135) {
+              const lineAlpha = (1 - connDist / 135) * 0.35;
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
               ctx.strokeStyle = `rgba(${p.c.r}, ${p.c.g}, ${p.c.b}, ${lineAlpha})`;
-              ctx.lineWidth = 0.9;
+              ctx.lineWidth = 1.1;
               ctx.stroke();
             }
           }
@@ -2471,6 +3088,186 @@
     } else {
       init();
     }
+  
+    /* Sidebar Hub Controls */
+    function openSidebar() {
+      document.getElementById('sidebar-drawer').classList.add('active');
+      document.getElementById('sidebar-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+      document.getElementById('sidebar-drawer').classList.remove('active');
+      document.getElementById('sidebar-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Keyboard ESC listener
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSidebar();
+    });
+
+    /* Font Size Zoom Controller */
+    let currentZoomLevel = parseInt(localStorage.getItem('nayagram_zoom') || '0', 10);
+    function adjustFontSize(level) {
+      currentZoomLevel = level;
+      localStorage.setItem('nayagram_zoom', level);
+      document.body.classList.remove('zoom-small', 'zoom-default', 'zoom-large', 'zoom-xlarge');
+      
+      const buttons = document.querySelectorAll('.sb-zoom-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+
+      if (level === -1) {
+        document.body.classList.add('zoom-small');
+        if (buttons[0]) buttons[0].classList.add('active');
+      } else if (level === 1) {
+        document.body.classList.add('zoom-large');
+        if (buttons[2]) buttons[2].classList.add('active');
+      } else if (level === 2) {
+        document.body.classList.add('zoom-xlarge');
+        if (buttons[3]) buttons[3].classList.add('active');
+      } else {
+        document.body.classList.add('zoom-default');
+        if (buttons[1]) buttons[1].classList.add('active');
+      }
+    }
+    // Apply saved zoom
+    if (currentZoomLevel !== 0) adjustFontSize(currentZoomLevel);
+
+    /* One-Click Copy Policy Link */
+    function copyPolicyLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('✓ Official Policy Link Copied!');
+      }).catch(() => {
+        showToast('✓ Copied: ' + url);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notify');
+      toast.innerText = msg;
+      toast.classList.add('active');
+      setTimeout(() => {
+        toast.classList.remove('active');
+      }, 3000);
+    }
+
   </script>
+
+  <!-- Slide-out Off-Canvas Features & Navigation Hub -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer" aria-label="Features and Navigation Drawer">
+    <div class="sidebar-header">
+      <div class="sidebar-header-title">
+        <span class="sidebar-title-badge">⚡</span>
+        <div>
+          <h3 id="txt-sb-title">NayaGram Feature Hub</h3>
+          <span class="sidebar-subtitle" id="txt-sb-sub">Security & Quick Navigation</span>
+        </div>
+      </div>
+      <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close Sidebar">✕</button>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Feature 1: Live Security & Architectural Integrity Verification -->
+      <div class="sidebar-card sidebar-security-card">
+        <div class="sb-card-badge">🔒 System Integrity Status</div>
+        <h4 class="sb-card-title" id="txt-sb-sec-title">Zero-Data Architecture</h4>
+        <ul class="sb-security-list">
+          <li>
+            <span class="sb-status-dot dot-green"></span>
+            <div><strong>Relay Infrastructure:</strong> 0 Intermediate Servers (Direct MTProto)</div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-cyan"></span>
+            <div><strong>Encryption Standards:</strong> MTProto 2.0 (2048-bit RSA + 256-bit AES)</div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-purple"></span>
+            <div><strong>Device Storage:</strong> Sandboxed UID <code>/data/data/org.nayagram.platform/</code></div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-blue"></span>
+            <div><strong>Commercial Trackers:</strong> 0 Telemetry / Zero Data Selling Guarantee</div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-green"></span>
+            <div><strong>License:</strong> 100% Auditable GNU General Public License v3</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Feature 2: Text Size Zoom Accessibility Controls -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">👁️ Accessibility & Reading Comfort</div>
+        <h4 class="sb-card-title" id="txt-sb-zoom-title">Font Size Adjuster</h4>
+        <div class="sb-zoom-controls">
+          <button class="sb-zoom-btn" onclick="adjustFontSize(-1)">A- Small</button>
+          <button class="sb-zoom-btn active" onclick="adjustFontSize(0)">A Default</button>
+          <button class="sb-zoom-btn" onclick="adjustFontSize(1)">A+ Large</button>
+          <button class="sb-zoom-btn" onclick="adjustFontSize(2)">A++ Extra</button>
+        </div>
+      </div>
+
+      <!-- Feature 3: One-Click Quick Share & Copy Link -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">📋 Share Policy</div>
+        <h4 class="sb-card-title" id="txt-sb-share-title">Verified Policy URL</h4>
+        <p class="sb-card-desc" id="txt-sb-share-desc">Copy the certified HTTPS link to this policy for official audits and Play Store submissions.</p>
+        <button class="sb-action-btn" onclick="copyPolicyLink()" id="btn-copy-policy">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+          <span id="txt-copy-btn">Copy Official Policy Link</span>
+        </button>
+      </div>
+
+      <!-- Feature 4: Section Jump Quick Navigation (All 12 Articles) -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">📑 Quick Navigation</div>
+        <h4 class="sb-card-title" id="txt-sb-nav-title">Jump to Policy Section</h4>
+        <div class="sb-nav-links">
+          <a href="#sec-a" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">A.1</span> <span>Independence & Licensing</span></a>
+          <a href="#sec-b" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">B.1</span> <span>Telegram Policy & TOS</span></a>
+          <a href="#sec-c" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">C.1</span> <span>Direct MTProto Flow</span></a>
+          <a href="#sec-d" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">D.1</span> <span>Sandboxed Storage (/data/data/)</span></a>
+          <a href="#sec-e" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">E.1</span> <span>Zero Data Selling Prohibition</span></a>
+          <a href="#sec-f" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">F.1</span> <span>Hardware & Permissions</span></a>
+          <a href="#sec-g" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">G.1</span> <span>Google AdMob Transparency</span></a>
+          <a href="#sec-h" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">H.1</span> <span>Account & Data Deletion</span></a>
+          <a href="#sec-i" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">I.1</span> <span>Children's Online Privacy</span></a>
+          <a href="#sec-j" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">J.1</span> <span>Third-Party Native SDKs</span></a>
+          <a href="#sec-k" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">K.1</span> <span>Reproducible Builds</span></a>
+          <a href="#sec-l" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">L.1</span> <span>Official Support Desk</span></a>
+        </div>
+      </div>
+
+      <!-- Feature 5: Direct External Resources -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">🌐 Official Portals</div>
+        <div class="sb-external-grid">
+          <a href="https://t.me/NayaGramOfficial" target="_blank" rel="noopener noreferrer" class="sb-ext-btn">
+            <span>📢 Telegram Official</span>
+            <span>↗</span>
+          </a>
+          <a href="https://github.com/NayaGramPlatform/NayaGram-Client" target="_blank" rel="noopener noreferrer" class="sb-ext-btn">
+            <span>🐙 GitHub Repository</span>
+            <span>↗</span>
+          </a>
+          <a href="https://my.telegram.org/auth?to=delete" target="_blank" rel="noopener noreferrer" class="sb-ext-btn sb-ext-danger">
+            <span>🔒 Deletion Portal</span>
+            <span>↗</span>
+          </a>
+          <a href="mailto:support.nayagram@gmail.com" class="sb-ext-btn">
+            <span>✉️ Support Desk</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-notification" id="toast-notify">✓ Copied to clipboard!</div>
+
 </body>
 </html>
