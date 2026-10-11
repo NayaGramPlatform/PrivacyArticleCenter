@@ -462,26 +462,30 @@
       border-color: rgba(56, 189, 248, 0.4);
     }
 
-    /* Prefix Headline: BIGGER, RADIANT SAPPHIRE BLUE / CYAN, NO BLACK! */
+    /* Prefix Headline: ALWAYS IN ONE SINGLE UNBROKEN STRAIGHT LINE! */
     .hero-headline-straight {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: nowrap;
-      gap: 12px;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      gap: 10px;
       margin: 0 auto 16px;
       padding: 4px 14px 12px;
       max-width: 100%;
+      overflow: visible;
     }
 
     .hero-title-prefix {
-      font-size: clamp(1.35rem, 2.5vw, 2.25rem);
+      font-size: clamp(1rem, 2.3vw, 1.95rem);
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #1E40AF;
-      white-space: nowrap;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
       line-height: 1.35;
       display: inline-block;
+      flex-shrink: 0;
       transition: color 0.3s ease;
     }
 
@@ -491,13 +495,15 @@
     }
 
     .hero-brand-name {
-      font-size: clamp(1.5rem, 3.2vw, 2.75rem);
+      font-size: clamp(1.15rem, 2.9vw, 2.45rem);
       font-weight: 900;
       letter-spacing: -0.02em;
       line-height: 1.35;
-      white-space: nowrap;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
       padding-bottom: 2px;
       display: inline-block;
+      flex-shrink: 0;
       background: linear-gradient(135deg, #0284C7 0%, #8B5CF6 50%, #10B981 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -505,18 +511,36 @@
 
     @media (max-width: 768px) {
       .hero-headline-straight {
-        flex-wrap: wrap;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
         gap: 6px;
+        padding: 4px 6px 10px;
+      }
+      .hero-title-prefix {
+        font-size: clamp(0.76rem, 3.1vw, 1.25rem) !important;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        flex-shrink: 0;
+      }
+      .hero-brand-name {
+        font-size: clamp(0.86rem, 3.6vw, 1.45rem) !important;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        flex-shrink: 0;
+        padding-bottom: 2px;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 420px) {
+      .hero-headline-straight {
+        gap: 4px;
+        padding: 2px 4px 8px;
+      }
       .hero-title-prefix {
-        font-size: 1.65rem;
+        font-size: clamp(0.7rem, 2.9vw, 0.92rem) !important;
       }
       .hero-brand-name {
-        font-size: 2.6rem;
-        padding-bottom: 12px;
+        font-size: clamp(0.8rem, 3.4vw, 1.05rem) !important;
       }
     }
 
@@ -2251,6 +2275,122 @@
     </footer>
   </div>
 
+
+
+  <!-- Slide-out Off-Canvas Features & Navigation Hub -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer" aria-label="Features and Navigation Drawer">
+    <div class="sidebar-header">
+      <div class="sidebar-header-title">
+        <span class="sidebar-title-badge">⚡</span>
+        <div>
+          <h3 id="txt-sb-title">NayaGram Feature Hub</h3>
+          <span class="sidebar-subtitle" id="txt-sb-sub">Security & Quick Navigation</span>
+        </div>
+      </div>
+      <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close Sidebar">✕</button>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Feature 1: Live Security & Architectural Integrity Verification -->
+      <div class="sidebar-card sidebar-security-card">
+        <div class="sb-card-badge">🔒 System Integrity Status</div>
+        <h4 class="sb-card-title" id="txt-sb-sec-title">Zero-Data Architecture</h4>
+        <ul class="sb-security-list">
+          <li>
+            <span class="sb-status-dot dot-green"></span>
+            <div><strong>Relay Infrastructure:</strong> 0 Intermediate Servers (Direct MTProto)</div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-cyan"></span>
+            <div><strong>Encryption Standards:</strong> MTProto 2.0 (2048-bit RSA + 256-bit AES)</div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-purple"></span>
+            <div><strong>Device Storage:</strong> Sandboxed UID <code>/data/data/org.nayagram.platform/</code></div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-blue"></span>
+            <div><strong>Commercial Trackers:</strong> 0 Telemetry / Zero Data Selling Guarantee</div>
+          </li>
+          <li>
+            <span class="sb-status-dot dot-green"></span>
+            <div><strong>License:</strong> 100% Auditable GNU General Public License v3</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Feature 2: Text Size Zoom Accessibility Controls -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">👁️ Accessibility & Reading Comfort</div>
+        <h4 class="sb-card-title" id="txt-sb-zoom-title">Font Size Adjuster</h4>
+        <div class="sb-zoom-controls">
+          <button class="sb-zoom-btn" onclick="adjustFontSize(-1)">A- Small</button>
+          <button class="sb-zoom-btn active" onclick="adjustFontSize(0)">A Default</button>
+          <button class="sb-zoom-btn" onclick="adjustFontSize(1)">A+ Large</button>
+          <button class="sb-zoom-btn" onclick="adjustFontSize(2)">A++ Extra</button>
+        </div>
+      </div>
+
+      <!-- Feature 3: One-Click Quick Share & Copy Link -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">📋 Share Policy</div>
+        <h4 class="sb-card-title" id="txt-sb-share-title">Verified Policy URL</h4>
+        <p class="sb-card-desc" id="txt-sb-share-desc">Copy the certified HTTPS link to this policy for official audits and Play Store submissions.</p>
+        <button class="sb-action-btn" onclick="copyPolicyLink()" id="btn-copy-policy">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+          <span id="txt-copy-btn">Copy Official Policy Link</span>
+        </button>
+      </div>
+
+      <!-- Feature 4: Section Jump Quick Navigation (All 12 Articles) -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">📑 Quick Navigation</div>
+        <h4 class="sb-card-title" id="txt-sb-nav-title">Jump to Policy Section</h4>
+        <div class="sb-nav-links">
+          <a href="#sec-a" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">A.1</span> <span>Independence & Licensing</span></a>
+          <a href="#sec-b" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">B.1</span> <span>Telegram Policy & TOS</span></a>
+          <a href="#sec-c" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">C.1</span> <span>Direct MTProto Flow</span></a>
+          <a href="#sec-d" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">D.1</span> <span>Sandboxed Storage (/data/data/)</span></a>
+          <a href="#sec-e" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">E.1</span> <span>Zero Data Selling Prohibition</span></a>
+          <a href="#sec-f" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">F.1</span> <span>Hardware & Permissions</span></a>
+          <a href="#sec-g" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">G.1</span> <span>Google AdMob Transparency</span></a>
+          <a href="#sec-h" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">H.1</span> <span>Account & Data Deletion</span></a>
+          <a href="#sec-i" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">I.1</span> <span>Children's Online Privacy</span></a>
+          <a href="#sec-j" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">J.1</span> <span>Third-Party Native SDKs</span></a>
+          <a href="#sec-k" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">K.1</span> <span>Reproducible Builds</span></a>
+          <a href="#sec-l" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">L.1</span> <span>Official Support Desk</span></a>
+        </div>
+      </div>
+
+      <!-- Feature 5: Direct External Resources -->
+      <div class="sidebar-card">
+        <div class="sb-card-badge">🌐 Official Portals</div>
+        <div class="sb-external-grid">
+          <a href="https://t.me/NayaGramOfficial" target="_blank" rel="noopener noreferrer" class="sb-ext-btn">
+            <span>📢 Telegram Official</span>
+            <span>↗</span>
+          </a>
+          <a href="https://github.com/NayaGramPlatform/NayaGram-Client" target="_blank" rel="noopener noreferrer" class="sb-ext-btn">
+            <span>🐙 GitHub Repository</span>
+            <span>↗</span>
+          </a>
+          <a href="https://my.telegram.org/auth?to=delete" target="_blank" rel="noopener noreferrer" class="sb-ext-btn sb-ext-danger">
+            <span>🔒 Deletion Portal</span>
+            <span>↗</span>
+          </a>
+          <a href="mailto:support.nayagram@gmail.com" class="sb-ext-btn">
+            <span>✉️ Support Desk</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-notification" id="toast-notify">✓ Copied to clipboard!</div>
+
   <script>
     /* Complete Bilingual Language Translation System */
     const translations = {
@@ -3134,14 +3274,37 @@
     // Apply saved zoom
     if (currentZoomLevel !== 0) adjustFontSize(currentZoomLevel);
 
-    /* One-Click Copy Policy Link */
+    /* One-Click Copy Policy Link with Full Fallback */
     function copyPolicyLink() {
       const url = window.location.href;
-      navigator.clipboard.writeText(url).then(() => {
-        showToast('✓ Official Policy Link Copied!');
-      }).catch(() => {
-        showToast('✓ Copied: ' + url);
-      });
+      const successMsg = currentLanguage === 'bn' ? '✓ অফিসিয়াল পলিসি লিংক কপি হয়েছে!' : '✓ Official Policy Link Copied!';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast(successMsg);
+        }).catch(() => {
+          fallbackCopyText(url, successMsg);
+        });
+      } else {
+        fallbackCopyText(url, successMsg);
+      }
+    }
+
+    function fallbackCopyText(text, successMsg) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      ta.style.top = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg);
+      } catch (err) {
+        showToast('✓ Link: ' + text);
+      }
+      document.body.removeChild(ta);
     }
 
     function showToast(msg) {
@@ -3154,120 +3317,5 @@
     }
 
   </script>
-
-  <!-- Slide-out Off-Canvas Features & Navigation Hub -->
-  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
-  <aside class="sidebar-drawer" id="sidebar-drawer" aria-label="Features and Navigation Drawer">
-    <div class="sidebar-header">
-      <div class="sidebar-header-title">
-        <span class="sidebar-title-badge">⚡</span>
-        <div>
-          <h3 id="txt-sb-title">NayaGram Feature Hub</h3>
-          <span class="sidebar-subtitle" id="txt-sb-sub">Security & Quick Navigation</span>
-        </div>
-      </div>
-      <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close Sidebar">✕</button>
-    </div>
-
-    <div class="sidebar-content">
-      <!-- Feature 1: Live Security & Architectural Integrity Verification -->
-      <div class="sidebar-card sidebar-security-card">
-        <div class="sb-card-badge">🔒 System Integrity Status</div>
-        <h4 class="sb-card-title" id="txt-sb-sec-title">Zero-Data Architecture</h4>
-        <ul class="sb-security-list">
-          <li>
-            <span class="sb-status-dot dot-green"></span>
-            <div><strong>Relay Infrastructure:</strong> 0 Intermediate Servers (Direct MTProto)</div>
-          </li>
-          <li>
-            <span class="sb-status-dot dot-cyan"></span>
-            <div><strong>Encryption Standards:</strong> MTProto 2.0 (2048-bit RSA + 256-bit AES)</div>
-          </li>
-          <li>
-            <span class="sb-status-dot dot-purple"></span>
-            <div><strong>Device Storage:</strong> Sandboxed UID <code>/data/data/org.nayagram.platform/</code></div>
-          </li>
-          <li>
-            <span class="sb-status-dot dot-blue"></span>
-            <div><strong>Commercial Trackers:</strong> 0 Telemetry / Zero Data Selling Guarantee</div>
-          </li>
-          <li>
-            <span class="sb-status-dot dot-green"></span>
-            <div><strong>License:</strong> 100% Auditable GNU General Public License v3</div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Feature 2: Text Size Zoom Accessibility Controls -->
-      <div class="sidebar-card">
-        <div class="sb-card-badge">👁️ Accessibility & Reading Comfort</div>
-        <h4 class="sb-card-title" id="txt-sb-zoom-title">Font Size Adjuster</h4>
-        <div class="sb-zoom-controls">
-          <button class="sb-zoom-btn" onclick="adjustFontSize(-1)">A- Small</button>
-          <button class="sb-zoom-btn active" onclick="adjustFontSize(0)">A Default</button>
-          <button class="sb-zoom-btn" onclick="adjustFontSize(1)">A+ Large</button>
-          <button class="sb-zoom-btn" onclick="adjustFontSize(2)">A++ Extra</button>
-        </div>
-      </div>
-
-      <!-- Feature 3: One-Click Quick Share & Copy Link -->
-      <div class="sidebar-card">
-        <div class="sb-card-badge">📋 Share Policy</div>
-        <h4 class="sb-card-title" id="txt-sb-share-title">Verified Policy URL</h4>
-        <p class="sb-card-desc" id="txt-sb-share-desc">Copy the certified HTTPS link to this policy for official audits and Play Store submissions.</p>
-        <button class="sb-action-btn" onclick="copyPolicyLink()" id="btn-copy-policy">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
-          <span id="txt-copy-btn">Copy Official Policy Link</span>
-        </button>
-      </div>
-
-      <!-- Feature 4: Section Jump Quick Navigation (All 12 Articles) -->
-      <div class="sidebar-card">
-        <div class="sb-card-badge">📑 Quick Navigation</div>
-        <h4 class="sb-card-title" id="txt-sb-nav-title">Jump to Policy Section</h4>
-        <div class="sb-nav-links">
-          <a href="#sec-a" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">A.1</span> <span>Independence & Licensing</span></a>
-          <a href="#sec-b" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">B.1</span> <span>Telegram Policy & TOS</span></a>
-          <a href="#sec-c" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">C.1</span> <span>Direct MTProto Flow</span></a>
-          <a href="#sec-d" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">D.1</span> <span>Sandboxed Storage (/data/data/)</span></a>
-          <a href="#sec-e" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">E.1</span> <span>Zero Data Selling Prohibition</span></a>
-          <a href="#sec-f" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">F.1</span> <span>Hardware & Permissions</span></a>
-          <a href="#sec-g" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">G.1</span> <span>Google AdMob Transparency</span></a>
-          <a href="#sec-h" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">H.1</span> <span>Account & Data Deletion</span></a>
-          <a href="#sec-i" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">I.1</span> <span>Children's Online Privacy</span></a>
-          <a href="#sec-j" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">J.1</span> <span>Third-Party Native SDKs</span></a>
-          <a href="#sec-k" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">K.1</span> <span>Reproducible Builds</span></a>
-          <a href="#sec-l" onclick="closeSidebar()" class="sb-nav-item"><span class="sb-nav-tag">L.1</span> <span>Official Support Desk</span></a>
-        </div>
-      </div>
-
-      <!-- Feature 5: Direct External Resources -->
-      <div class="sidebar-card">
-        <div class="sb-card-badge">🌐 Official Portals</div>
-        <div class="sb-external-grid">
-          <a href="https://t.me/NayaGramOfficial" target="_blank" rel="noopener noreferrer" class="sb-ext-btn">
-            <span>📢 Telegram Official</span>
-            <span>↗</span>
-          </a>
-          <a href="https://github.com/NayaGramPlatform/NayaGram-Client" target="_blank" rel="noopener noreferrer" class="sb-ext-btn">
-            <span>🐙 GitHub Repository</span>
-            <span>↗</span>
-          </a>
-          <a href="https://my.telegram.org/auth?to=delete" target="_blank" rel="noopener noreferrer" class="sb-ext-btn sb-ext-danger">
-            <span>🔒 Deletion Portal</span>
-            <span>↗</span>
-          </a>
-          <a href="mailto:support.nayagram@gmail.com" class="sb-ext-btn">
-            <span>✉️ Support Desk</span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Interactive Toast Notification -->
-  <div class="toast-notification" id="toast-notify">✓ Copied to clipboard!</div>
-
 </body>
 </html>
