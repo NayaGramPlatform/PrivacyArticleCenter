@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 20
-      - name: Restore and patch privacyContent.ts
+          fetch-depth: 50
+      - name: Restore privacyContent.ts from last good commit and patch
         run: |
           set -e
-          git show eb3b139aba85f29d8340109bb3400a101de8598d:src/data/privacyContent.ts > src/data/privacyContent.ts
+          git show d17587d2e3bf40e75bc780876900ff8ae8fa4131:src/data/privacyContent.ts > src/data/privacyContent.ts
           python3 << 'PY'
           from pathlib import Path
           p = Path('src/data/privacyContent.ts')
@@ -32,26 +32,15 @@ jobs:
           for a,b in reps:
               t = t.replace(a,b)
           p.write_text(t, encoding='utf-8')
-          print('patched', p.stat().st_size)
+          print('privacyContent', p.stat().st_size)
           PY
-      - name: Patch index.html honesty + date + logo
+      - name: Patch index.html (live GitHub Pages source)
         run: |
           set -e
           python3 << 'PY'
           from pathlib import Path
           p = Path('index.html')
           t = p.read_text(encoding='utf-8')
-          reps = [
-            ('Google Play Data Safety Certified • Updated October 2026',
-             'Google Play Data Safety Form Ready • Updated 23 October 2026'),
-            ('গুগল প্লে ডেটা সেফটি সার্টিফাইড • অক্টোবর ২০২৬ হালনাগাদ',
-             'গুগল প্লে ডেটা সেফটি ফর্ম প্রস্তুত • ২৩ অক্টোবর ২০২৬ হালনাগাদ'),
-            ('Google Play Data Safety compliant privacy charter.',
-             'Google Play Data Safety form–aligned privacy charter.'),
-            ('src="./assets/nayagram_logo.png" onerror="this.onerror=null; this.src=\'https://nayagramplatform.github.io/PrivacyArticleCenter/assets/nayagram_logo.png\;"',
-             'src="https://i.postimg.cc/65K5k2WS/%F0%9D%90%8D%F0%9D%90%9A%F0%9D%90%B2%F0%9D%90%9A-%F0%9D%90%86%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%A6-%F0%9D%90%8F%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A6.png" onerror="this.onerror=null; this.src=\'./assets/nayagram_logo.png\'"'),
-          ]
-          # simpler logo replace
           t = t.replace(
             'Google Play Data Safety Certified • Updated October 2026',
             'Google Play Data Safety Form Ready • Updated 23 October 2026')
@@ -62,10 +51,11 @@ jobs:
             'Google Play Data Safety compliant privacy charter.',
             'Google Play Data Safety form-aligned privacy charter.')
           logo = 'https://i.postimg.cc/65K5k2WS/%F0%9D%90%8D%F0%9D%90%9A%F0%9D%90%B2%F0%9D%90%9A-%F0%9D%90%86%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%A6-%F0%9D%90%8F%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A6.png'
-          t = t.replace('src="./assets/nayagram_logo.png"',
-                        f'src="{logo}"')
+          t = t.replace('src="./assets/nayagram_logo.png"', f'src="{logo}"')
           p.write_text(t, encoding='utf-8')
-          print('index', p.stat().st_size)
+          print('index.html', p.stat().st_size)
+          assert 'Form Ready' in t
+          assert '23 October 2026' in t
           PY
       - name: Commit and push
         run: |
@@ -74,6 +64,5 @@ jobs:
           git config user.email "287420619+NayaGramPlatform@users.noreply.github.com"
           git add src/data/privacyContent.ts index.html
           git status
-          git diff --cached --stat
-          git commit -m "privacy: restore content, honest Play claims, date 23 Oct 2026, logo update"
+          git commit -m "privacy: restore content, honest Play claims, date 23 Oct 2026, logo update" || echo "No changes"
           git push origin HEAD:main
